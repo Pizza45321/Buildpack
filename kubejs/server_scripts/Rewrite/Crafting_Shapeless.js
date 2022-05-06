@@ -1,0 +1,12 @@
+onEvent('recipes', event => {
+	event.shapeless('create:rose_quartz', ["minecraft:quartz","#forge:dusts/redstone","#forge:dusts/redstone","#forge:dusts/redstone","#forge:dusts/redstone"])
+	event.shapeless('1x thermal:press_gear_die', ['immersiveengineering:mold_gear'])
+	event.shapeless('1x immersiveengineering:mold_gear', ['thermal:press_gear_die'])
+	event.shapeless('masterfulmachinery:basic_bitem_port_items_output', ['masterfulmachinery:basic_bitem_port_items_input'])
+	event.shapeless('masterfulmachinery:basic_bitem_port_items_input', ['masterfulmachinery:basic_bitem_port_items_output'])
+	event.shapeless('masterfulmachinery:basic_bfluid_port_fluids_output', ['masterfulmachinery:basic_bfluid_port_fluids_input'])
+	event.shapeless('masterfulmachinery:basic_bfluid_port_fluids_input', ['masterfulmachinery:basic_bfluid_port_fluids_output'])
+	event.shapeless('masterfulmachinery:basic_benergy_port_energy_output', ['masterfulmachinery:basic_benergy_port_energy_input'])
+	event.shapeless('masterfulmachinery:basic_benergy_port_energy_input', ['masterfulmachinery:basic_benergy_port_energy_output'])
+	event.shapeless('extendedcrafting:basic_table', ['minecraft:crafting_table', 'iron_block'])
+})
