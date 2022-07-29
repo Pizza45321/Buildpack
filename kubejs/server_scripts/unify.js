@@ -28,7 +28,8 @@ global["unifyexclude"] = new Set([
 var tags = [
     "forge:plates/iron",
     "forge:gears/iron",
-    "forge:silicon"
+    "forge:silicon",
+    'forge:rubber'
 ]
 // Block tags for ore gen unification (DOES NOT WORK CURRENTLY)
 /*var btags = [

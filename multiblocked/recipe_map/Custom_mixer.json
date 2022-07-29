@@ -1,0 +1,88 @@
+{
+  "name": "Custom Mixer",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "28ddaa67-8f5c-4323-a01a-47964dad10fa",
+      "duration": 160,
+      "inputs": {
+        "fluid": [
+          {
+            "content": {
+              "fluid": "createaddition:seed_oil",
+              "amount": 1000
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "fluid": "thermal:tree_oil",
+              "amount": 1000
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "fluid": [
+          {
+            "content": {
+              "fluid": "kubejs:c_biofuel",
+              "amount": 2000
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 360,
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "e6fe1a78-2553-4764-8214-71baab657cb0",
+      "duration": 160,
+      "inputs": {
+        "fluid": [
+          {
+            "content": {
+              "fluid": "kubejs:c_biofuel",
+              "amount": 1000
+            },
+            "chance": 1.0
+          },
+          {
+            "content": {
+              "fluid": "mekanism:steam",
+              "amount": 1000
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "fluid": [
+          {
+            "content": {
+              "fluid": "kubejs:r_biofuel",
+              "amount": 2000
+            },
+            "chance": 1.0
+          }
+        ]
+      },
+      "tickInputs": {
+        "forge_energy": [
+          {
+            "content": 360,
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}

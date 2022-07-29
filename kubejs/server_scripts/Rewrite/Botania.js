@@ -1,75 +1,9 @@
 onEvent('recipes', event => {
-	event.custom({
-  "type": "botania:elven_trade",
-  "ingredients": [
-    {
-      "item": "immersiveengineering:ingot_steel"
-    },
-    {
-      "item": "immersiveengineering:ingot_steel"
-    },
-    {
-      "item": "immersiveengineering:ingot_steel"
-    },
-    {
-      "item": "immersiveengineering:ingot_steel"
-    }
-  ],
-  "output": [
-    {
-      "item": "botania:elementium_ingot"
-    }
-  ]
-})
-event.custom({
-  "type": "botania:elven_trade",
-  "ingredients": [
-    {
-      "item": "bloodmagic:blankslate"
-    },
-    {
-      "item": "bloodmagic:blankslate"
-    },
-    {
-      "item": "bloodmagic:blankslate"
-    },
-    {
-      "item": "bloodmagic:blankslate"
-    }
-  ],
-  "output": [
-    {
-      "item": "botania:dragonstone"
-    }
-  ]
-})
-event.custom({
-  "type": "botania:elven_trade",
-  "ingredients": [
-    {
-      "item": "astralsorcery:nocturnal_powder"
-    },
-    {
-      "item": "astralsorcery:nocturnal_powder"
-    },
-    {
-      "item": "astralsorcery:nocturnal_powder"
-    },
-    {
-      "item": "astralsorcery:nocturnal_powder"
-    }
-  ],
-  "output": [
-    {
-      "item": "botania:pixie_dust"
-    }
-  ]
-})
 event.custom({
   "type": "botania:pure_daisy",
   "input": {
     "type": "block",
-    "block": "minecraft:polished_andesite"
+    "block": "create:andesite_casing"
   },
   "output": {
     "name": "botania:livingrock"
@@ -79,36 +13,11 @@ event.custom({
   "type": "botania:pure_daisy",
   "input": {
     "type": "block",
-    "block": "astralsorcery:infused_wood"
+    "block": "malum:soulwood"
   },
   "output": {
     "name": "botania:livingwood"
   }
-})
-event.custom({
-  "type": "botania:runic_altar",
-  "output": {
-    "item": 'cagedmobs:star_infused_netherite_ingot',
-    "count": 1
-  },
-  "mana": 2000,
-  "ingredients": [
-    {
-      "item": 'minecraft:netherite_ingot'
-    },
-    {
-      "item": 'minecraft:nether_star'
-    },
-    {
-      "item": 'minecraft:nether_star'
-    },
-    {
-      "item": 'minecraft:nether_star'
-    },
-    {
-      "item": 'minecraft:nether_star'
-    }
-  ]
 })
 event.custom({
   "type": "botania:runic_altar",
@@ -122,19 +31,19 @@ event.custom({
   "mana": 2000,
   "ingredients": [
     {
-      "item": 'thermal:copper_plate'
+      "tag": 'forge:copper/plates'
     },
     {
-      "item": 'create:brass_sheet'
+      "tag": 'forge:plates/brass'
     },
     {
-      "item": 'thermal:iron_plate'
+      "tag": 'forge:iron/plates'
     },
     {
-      "item": 'astralsorcery:parchment'
+      "item": 'minecraft:paper'
     },
     {
-      "item": 'createaddition:zinc_sheet'
+      "tag": 'forge:plates/zinc'
     }
   ]
 })
@@ -150,7 +59,7 @@ event.custom({
   "mana": 2000,
   "ingredients": [
     {
-      "item": 'industrialforegoing:plastic'
+      "tag": 'forge:plastic'
     },
     {
       "item": 'immersiveengineering:component_iron'
@@ -159,7 +68,10 @@ event.custom({
       "item": 'immersiveengineering:component_steel'
     },
     {
-      "item": 'astralsorcery:parchment'
+      "item": 'create:precision_mechanism'
+    },
+    {
+      "item": 'minecraft:paper'
     }
   ]
 })

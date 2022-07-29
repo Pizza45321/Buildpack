@@ -2,16 +2,13 @@ priority: 5
 
 var IdRecipes = [
 'tconstruct:smeltery/casting/seared/smeltery_controller',
-'astralsorcery:block_transmutation/iron_starmetal',
 'extendedcrafting:black_iron_ingot',
 'bloodmagic:altar/slate',
-'bloodmagic:altar/demonicslate',
+//'bloodmagic:altar/demonicslate',
 'bloodmagic:altar/weakbloodorb',
 'bloodmagic:altar/apprenticebloodorb',
 'bloodmagic:altar/masterbloodorb',
 'bloodmagic:altar/magicianbloodorb',
-'astralsorcery:altar/illumination_powder',
-'astralsorcery:altar/nocturnal_powder',
 'industrialforegoing:dissolution_chamber/simple_machine_frame',
 'industrialforegoing:dissolution_chamber/advanced_machine_frame',
 "create:mixing/chromatic_compound",
@@ -25,20 +22,41 @@ var IdRecipes = [
 'immersiveengineering:crafting/blueprint_molds',
 'immersiveengineering:crafting/blueprint_components',
 'astralsorcery:altar/altar_attunement',
-"create:conversion_1",
-'create:conversion_67',
-'create:conversion_66',
 'extendedcrafting:luminessence',
-"jaopca:thermal_expansion.molten_to_material.refined_radiance",
 "tconstruct:smeltery/alloys/molten_lumium",
 "tconstruct:smeltery/alloys/molten_signalum",
 "tconstruct:smeltery/alloys/molten_enderium",
 'create:splashing/sand',
-'create:splashing/gravel']
+'create:splashing/gravel',
+'botania:runic_altar/earth',
+'botania:runic_altar/air',
+'botania:runic_altar/water',
+'botania:runic_altar/fire',
+'refinedstorage:quartz_enriched_iron',
+'industrialforegoing:iron_gear',
+'industrialforegoing:gold_gear',
+'industrialforegoing:diamond_gear',
+'malum:spirit_infusion/soul_stained_steel_ingot',
+'bloodmagic:alchemytable/binding_reagent',
+'bloodmagic:alchemytable/simple_catalyst',
+'bloodmagic:alchemytable/strengthened_catalyst']
 var outputsToChange = [
-	'cagedmobs:mobcage',
+'refinedstorage:processor_binding',
+"malum:spirit_altar",
+"hostilenetworks:deep_learner",
+"tiab:time_in_a_bottle",
+"hostilenetworks:sim_chamber",
+"hostilenetworks:loot_fabricator",
+'refinedstorage:machine_casing',
+"extradisks:advanced_machine_casing",
+'compactmachines:wall',
+'compactmachines:machine_tiny', 
+'compactmachines:machine_small', 
+'compactmachines:machine_normal', 
+'compactmachines:machine_large', 
+'compactmachines:machine_giant', 
+'compactmachines:machine_maximum',
     'botanypots:botany_pot',
-    'thermal:iron_gear',
     'thermal:constantan_gear',
     'thermal:gold_gear',
     'thermal:emerald_gear',
@@ -65,7 +83,6 @@ var outputsToChange = [
     'thermal:redstone_servo',
     'thermal:rf_coil',
     'extendedcrafting:redstone_ingot',
-    'appliedenergistics2:controller',
     'mysticalagriculture:infusion_pedestal',
     'mysticalagriculture:infusion_altar',
     'mekanism:steel_casing',
@@ -110,14 +127,9 @@ var outputsToChange = [
     'immersiveengineering:rs_engineering',
     'immersiveengineering:dynamo',
     'create:empty_blaze_burner',
-    'appliedenergistics2:interface',
-    'appliedenergistics2:drive',
-    'appliedenergistics2:molecular_assembler',
-    'appliedenergistics2:charger',
     'industrialforegoing:fluid_extractor',
     'industrialforegoing:latex_processing_unit',
     'create:rose_quartz',
-    'cagedmobs:star_infused_netherite_ingot',
     'create:rotation_speed_controller',
     'create:mechanical_arm',
     'mininggadgets:mininggadget',
@@ -125,10 +137,14 @@ var outputsToChange = [
     'thermal:machine_chiller',
     'thermal:netherite_gear',
     'botania:runic_altar',
-    'extendedcrafting:basic_table'
+    'extendedcrafting:basic_table',
+    'bigreactors:basic_reactorcasing',
+    'bigreactors:basic_turbinecasing',
+    'bigreactors:reinforced_reactorcasing',
+    'bigreactors:reinforced_turbinecasing',
+    'refinedstorage:controller'
     ]
-outputsToRemove = ['create:refined_radiance',
-'create:shadow_steel',
+outputsToRemove = [
 'thermal:enderium_glass',
 'thermal:signalum_glass',
 'thermal:lumium_glass',
@@ -136,7 +152,25 @@ outputsToRemove = ['create:refined_radiance',
 'immersiveengineering:component_steel',
 "create:copper_sheet",
 "create:golden_sheet",
-"create:iron_sheet"
+"create:iron_sheet",
+'tconstruct:gear_red_sand_cast',
+'tconstruct:gear_sand_cast',
+'rebornstorage:small_item_disk_part',
+'rebornstorage:medium_item_disk_part',
+'rebornstorage:large_item_disk_part',
+'rebornstorage:larger_item_disk_part',
+'rebornstorage:small_fluid_disk_part',
+'rebornstorage:medium_fluid_disk_part',
+'rebornstorage:large_fluid_disk_part',
+'rebornstorage:larger_fluid_disk_part',
+'extrastorage:storagepart_256k',
+'extrastorage:storagepart_1024k',
+'extrastorage:storagepart_4096k', 
+'extrastorage:storagepart_16384k',
+'extrastorage:storagepart_16384k_fluid',
+'extrastorage:storagepart_65536k_fluid',
+'extrastorage:storagepart_262144k_fluid',
+'extrastorage:storagepart_1048576k_fluid'
 ]
 onEvent('recipes', event =>{
 	outputsToChange.forEach(item =>{
@@ -161,11 +195,16 @@ event.remove({
     type: 'minecraft:crafting_shapeless'
   })
   event.remove({
-    output: '#forge:plates',
+    input: 'immersiveengineering:hammer',
+    mod: 'immersiveengineering',
     type: 'minecraft:crafting_shapeless'
   })
   event.remove({
-    output: 'appliedenergistics2:silicon',
+    output: 'refinedstorage:silicon',
+    type: 'minecraft:smelting'
+  })
+  event.remove({
+    output: 'thermal:cured_rubber',
     type: 'minecraft:smelting'
   })
 })
