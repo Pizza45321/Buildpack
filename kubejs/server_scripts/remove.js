@@ -37,7 +37,7 @@ var IdRecipes = [
 'industrialforegoing:gold_gear',
 'industrialforegoing:diamond_gear',
 'malum:spirit_infusion/soul_stained_steel_ingot',
-'bloodmagic:alchemytable/binding_reagent',
+'bloodmagic:alchemytable/reagent_binding',
 'bloodmagic:alchemytable/simple_catalyst',
 'bloodmagic:alchemytable/strengthened_catalyst']
 var outputsToChange = [
