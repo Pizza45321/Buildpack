@@ -1,0 +1,203 @@
+{
+  "consumeCatalyst": false,
+  "location": "bpa:advanced_coker",
+  "traits": {},
+  "allowRotate": true,
+  "showInJei": true,
+  "baseRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/gregtech_front",
+    "formedAsController": true,
+    "type": "gregtech"
+  },
+  "workingRenderer": {
+    "baseTexture": "multiblocked:blocks/gregtech_base",
+    "frontTexture": "multiblocked:blocks/overlay/overlay_front_active",
+    "type": "gregtech"
+  },
+  "properties": {
+    "isOpaque": true,
+    "destroyTime": 1.5,
+    "explosionResistance": 6.0,
+    "lightEmissive": 0,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "friction": 0.6,
+    "hasCollision": true,
+    "tabGroup": "multiblocked.all",
+    "stackSize": 64
+  },
+  "basePattern": {
+    "structureDir": [
+      "BACK",
+      "UP",
+      "RIGHT"
+    ],
+    "pattern": [
+      [
+        "ABAC",
+        "ADAC",
+        "ABAC",
+        "   C"
+      ],
+      [
+        "EEEC",
+        "EEEC",
+        "EEEC",
+        "   C"
+      ],
+      [
+        "EEE ",
+        "@EF ",
+        "EEE ",
+        "    "
+      ],
+      [
+        "EEEC",
+        "EEEC",
+        "EEEC",
+        "   C"
+      ],
+      [
+        "AGAC",
+        "AHAC",
+        "ABAC",
+        "   C"
+      ]
+    ],
+    "aisleRepetitions": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "predicates": {
+      "A": {
+        "blocks": [
+          {
+            "id": "create:brass_casing"
+          }
+        ],
+        "type": "blocks"
+      },
+      "controller": {
+        "location": "bpa:advanced_coker",
+        "type": "component"
+      },
+      "B": {
+        "blocks": [
+          {
+            "id": "createdeco:brass_sheet_metal"
+          }
+        ],
+        "type": "blocks"
+      },
+      "C": {
+        "blocks": [
+          {
+            "id": "createdeco:cast_iron_sheet_metal"
+          }
+        ],
+        "type": "blocks"
+      },
+      "D": {
+        "blocks": [
+          {
+            "id": "multiblocked:item_output"
+          }
+        ],
+        "type": "blocks"
+      },
+      "E": {
+        "blocks": [
+          {
+            "id": "immersiveengineering:cokebrick"
+          }
+        ],
+        "type": "blocks"
+      },
+      "F": {
+        "blocks": [
+          {
+            "id": "multiblocked:fluid_output"
+          }
+        ],
+        "type": "blocks"
+      },
+      "G": {
+        "blocks": [
+          {
+            "id": "multiblocked:energy_input"
+          }
+        ],
+        "type": "blocks"
+      },
+      "H": {
+        "blocks": [
+          {
+            "id": "multiblocked:item_input"
+          }
+        ],
+        "type": "blocks"
+      },
+      "air": {
+        "type": "air"
+      },
+      "any": {
+        "type": "any"
+      }
+    },
+    "symbolMap": {
+      "@": [
+        "controller"
+      ],
+      " ": [
+        "any"
+      ],
+      "A": [
+        "A"
+      ],
+      "B": [
+        "B"
+      ],
+      "C": [
+        "C"
+      ],
+      "D": [
+        "D"
+      ],
+      "E": [
+        "E"
+      ],
+      "F": [
+        "F"
+      ],
+      "G": [
+        "G"
+      ],
+      "H": [
+        "H"
+      ],
+      "-": [
+        "air"
+      ]
+    }
+  },
+  "recipeMap": "coke_oven"
+}

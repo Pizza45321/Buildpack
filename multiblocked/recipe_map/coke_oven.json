@@ -1,0 +1,100 @@
+{
+  "name": "coke_oven",
+  "progressTexture": "multiblocked:textures/gui/progress_bar_arrow.png",
+  "recipes": [
+    {
+      "uid": "5ca3fa8c-e3da-41aa-b820-88964fb212a1",
+      "duration": 1200,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:coal_block"
+              }
+            },
+            "chance": 1.0
+          }
+        ],
+        "forge_energy": [
+          {
+            "content": 1800,
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "immersiveengineering:coke"
+              }
+            },
+            "chance": 1.0
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "immersiveengineering:creosote",
+              "amount": 5000
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "uid": "9876cc48-c7e8-4870-96db-6a5bdbd2e345",
+      "duration": 600,
+      "inputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "minecraft:coal"
+              }
+            },
+            "chance": 1.0
+          }
+        ],
+        "forge_energy": [
+          {
+            "content": 1200,
+            "chance": 1.0
+          }
+        ]
+      },
+      "outputs": {
+        "item": [
+          {
+            "content": {
+              "type": "multiblocked:sized",
+              "count": 1,
+              "ingredient": {
+                "item": "immersiveengineering:coal_coke"
+              }
+            },
+            "chance": 1.0
+          }
+        ],
+        "fluid": [
+          {
+            "content": {
+              "fluid": "immersiveengineering:creosote",
+              "amount": 500
+            },
+            "chance": 1.0
+          }
+        ]
+      }
+    }
+  ]
+}
