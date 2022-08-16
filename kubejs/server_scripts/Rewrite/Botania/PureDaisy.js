@@ -13,7 +13,7 @@ event.custom({
   "type": "botania:pure_daisy",
   "input": {
     "type": "block",
-    "block": "malum:runewood"
+    "block": "malum:runewood_log"
   },
   "output": {
     "name": "botania:livingwood"

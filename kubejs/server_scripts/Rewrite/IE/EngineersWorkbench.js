@@ -1,4 +1,4 @@
-onEvent('recipes', event =>{
+onEvent('recipes', event => {
 event.custom({
   "type": "immersiveengineering:blueprint",
   "inputs": [

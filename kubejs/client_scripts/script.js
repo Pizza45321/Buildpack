@@ -36,7 +36,9 @@ var itemsToRemove = [
     'extrastorage:storagepart_16384k_fluid',
     'extrastorage:storagepart_65536k_fluid',
     'extrastorage:storagepart_262144k_fluid',
-    'extrastorage:storagepart_1048576k_fluid'
+    'extrastorage:storagepart_1048576k_fluid',
+    'mininggadgets:mininggadget_simple',
+    'mininggadgets:mininggadget_fancy'
 ]
 onEvent('jei.hide.items', event => {
 	itemsToRemove.forEach(item => { 

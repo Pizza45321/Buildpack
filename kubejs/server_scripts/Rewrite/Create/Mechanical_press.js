@@ -1,0 +1,12 @@
+onEvent('recipes', event =>{
+	event.recipes.createPressing('#forge:plates/iron','#forge:ingots/iron')
+	event.recipes.createPressing('#forge:plates/copper','#forge:ingots/copper')
+	event.recipes.createPressing('#forge:plates/tin','#forge:ingots/tin')
+	event.recipes.createPressing('#forge:plates/lead','#forge:ingots/lead')
+	event.recipes.createPressing('#forge:plates/silver','#forge:ingots/silver')
+	event.recipes.createPressing('#forge:plates/nickel','#forge:ingots/nickel')
+	event.recipes.createPressing('#forge:plates/steel','#forge:ingots/steel')
+	event.recipes.createPressing('#forge:plates/aluminum','#forge:ingots/aluminum')
+	event.recipes.createPressing('#forge:plates/gold','#forge:ingots/gold')
+	event.recipes.createPressing('extendedcrafting:black_iron_slate', 'extendedcrafting:black_iron_ingot')
+})

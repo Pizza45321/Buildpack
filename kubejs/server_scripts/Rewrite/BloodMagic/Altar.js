@@ -17,7 +17,7 @@ onEvent('recipes', event => {
 	event.custom({
   "type": "bloodmagic:altar",
   "input": {
-    "item": 'mysticalagriculture:prudentium_block'
+    "item": 'mysticalagriculture:inferium_block'
   },
   "output": {
     "item": "bloodmagic:apprenticebloodorb"
@@ -27,13 +27,26 @@ onEvent('recipes', event => {
   "consumptionRate": 5,
   "drainRate": 5
 })
-  event.custom({
+	event.custom({
+  "type": "bloodmagic:altar",
+  "input": {
+    "item": 'malum:soul_stained_steel_block'
+  },
+  "output": {
+    "item": "bloodmagic:masterbloodorb"
+  },
+  "upgradeLevel": 3,
+  "altarSyphon": 50000,
+  "consumptionRate": 30,
+  "drainRate": 50
+})
+	event.custom({
   "type": "bloodmagic:altar",
   "input": {
     "item": 'botania:elementium_block'
   },
   "output": {
-    "item": 'bloodmagic:magicianbloodorb'
+    "item": "bloodmagic:magicianbloodorb"
   },
   "upgradeLevel": 2,
   "altarSyphon": 25000,
@@ -43,15 +56,15 @@ onEvent('recipes', event => {
 	event.custom({
   "type": "bloodmagic:altar",
   "input": {
-    "item": 'malum:soul_stained_steel_block'
+    "item": 'botania:elementium_block'
   },
   "output": {
-    "item": 'bloodmagic:masterbloodorb'
+    "item": "bloodmagic::magicianbloodorb"
   },
-  "upgradeLevel": 3,
-  "altarSyphon": 50000,
-  "consumptionRate": 30,
-  "drainRate": 50
+  "upgradeLevel": 2,
+  "altarSyphon": 25000,
+  "consumptionRate": 5,
+  "drainRate": 1
 })
 	event.custom({
   "type": "bloodmagic:altar",
