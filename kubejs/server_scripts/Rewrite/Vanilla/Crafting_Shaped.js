@@ -2,15 +2,15 @@ onEvent('recipes', event => {
     event.shaped('1x mekanism:metallurgic_infuser', [
         'ara',
         'tsC',
-        'ScS'
+        'gcg'
     ], {
-        c: 'thermal:rf_coil',
+        c: 'immersiveengineering:component_electronic_adv',
         s: 'mekanism:steel_casing',
-        r: 'thermal:redstone_servo',
-        t: 'mekanism:basic_fluid_tank',
-        C: "#forge:chests",
+        r: 'create:spout',
+        t: 'create:item_vault',
+        C: 'mekanism:dynamic_tank',
         a: "minecraft:air",
-        S: "#forge:ingots/steel"
+        g: "#forge:gears/signalum"
     })
     event.shaped('2x thermal:rf_coil', [
         'aba',
@@ -343,4 +343,358 @@ event.shaped('brewinandchewin:pizza', [
         t: 'farmersdelight:tomato_sauce',
         b: '#forge:cooked_beef'
     })
- })
+event.shaped('industrialforegoing:dye_mixer', [
+        'pmp',
+        'rer',
+        'pbp'
+    ], {
+        r: 'mekanism:hdpe_rod',
+        p: '#forge:plastic',
+        m: 'create:mechanical_mixer',
+        b: 'mekanism:dye_base',
+        e: 'immersiveengineering:light_engineering'
+    })
+event.shaped('industrialforegoing:marine_fisher', [
+        'pmp',
+        'CeC',
+        'pcp'
+    ], {
+        C: 'thermal:aquachow',
+        p: '#forge:plastic',
+        m: 'thermal:device_fisher',
+        c: 'thermal:rf_coil',
+        e: 'immersiveengineering:light_engineering'
+    })
+event.shaped('industrialforegoing:mob_detector', [
+        'pmp',
+        'CeC',
+        'pcp'
+    ], {
+        C: 'extendedcrafting:redstone_component',
+        p: '#forge:plastic',
+        m: 'minecraft:observer',
+        c: 'immersiveengineering:wirecoil_redstone',
+        e: 'immersiveengineering:light_engineering'
+    })
+event.shaped('industrialforegoing:resourceful_furnace', [
+        'pmp',
+        'CeC',
+        'dcd'
+    ], {
+        C: 'minecraft:blast_furnace',
+        p: '#forge:plastic',
+        m: 'create:smart_chute',
+        c: '#forge:gears/signalum',
+        e: 'immersiveengineering:heavy_engineering',
+        d: 'immersiveengineering:plate_duroplast'
+    })
+event.shaped('industrialforegoing:bioreactor', [
+        'pmp',
+        'CeC',
+        'dcd'
+    ], {
+        C: 'thermal:device_composter',
+        p: '#forge:plastic',
+        m: 'create:mechanical_mixer',
+        c: 'create:blaze_burner',
+        e: 'immersiveengineering:heavy_engineering',
+        d: 'immersiveengineering:plate_duroplast'
+    })
+event.shaped('industrialforegoing:biofuel_generator', [
+        'pmp',
+        'CeC',
+        'dcd'
+    ], {
+        C: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic',
+        m: 'create:fluid_tank',
+        c: 'immersiveengineering:generator',
+        e: 'immersiveengineering:heavy_engineering',
+        d: 'immersiveengineering:plate_duroplast'
+    })
+event.shaped('industrialforegoing:sludge_refiner', [
+        'pmp',
+        'CeC',
+        'dcd'
+    ], {
+        C: 'thermal:device_composter',
+        p: '#forge:plastic',
+        m: 'thermal:upgrade_augment_1',
+        c: 'create:fluid_tank',
+        e: 'immersiveengineering:heavy_engineering',
+        d: 'immersiveengineering:plate_duroplast'
+    })
+event.shaped('industrialforegoing:block_breaker', [
+        'PaP',
+        'pes',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        p: '#forge:tools/pickaxes',
+        s: '#forge:tools/shovels',
+        a: '#forge:tools/axes',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        P: '#forge:plastic'
+    })
+event.shaped('industrialforegoing:fluid_collector', [
+        'ptp',
+        'beb',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        b: 'minecraft:bucket',
+        t: 'create:fluid_tank',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic'
+    })
+event.shaped('industrialforegoing:animal_feeder', [
+        'ptp',
+        'aeb',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        b: 'farmersdelight:horse_feed',
+        a: 'farmersdelight:dog_food',
+        t: 'immersiveengineering:treated_scaffold',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic'
+    })
+event.shaped('industrialforegoing:animal_rancher', [
+        'ptp',
+        'beb',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        b: 'minecraft:shears',
+        t: 'minecraft:bucket',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic'
+    })
+event.shaped('industrialforegoing:animal_baby_separator', [
+        'ptp',
+        'beb',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        b: '#forge:dough_wheat',
+        t: 'create:sweet_roll',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic'
+    })
+event.shaped('industrialforegoing:sewage_composter', [
+        'ptp',
+        'beb',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        b: 'thermal:device_composter',
+        t: 'thermal:upgrade_augment_2',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic'
+    })
+event.shaped('industrialforegoing:sewer', [
+        'ptp',
+        'beb',
+        'hch'
+    ], {
+        c: 'immersiveengineering:component_electronic',
+        b: 'create:fluid_tank',
+        t: 'create:item_drain',
+        e: '#industrialforegoing:machine_frame/pity',
+        h: 'mekanism:hdpe_sheet',
+        p: '#forge:plastic'
+    })
+event.shaped('thermal:charge_bench', [
+        'eee',
+        'cfc',
+        'lcl'
+    ], {
+        e: '#forge:ingots/electrum',
+        c: 'thermal:rf_coil',
+        f: 'mysticalagriculture:machine_frame',
+        l: '#forge:ingots/lead'
+    })
+event.shaped('thermal:tinker_bench', [
+        'ibi',
+        'afa',
+        'aca'
+    ], {
+        i: '#forge:ingots/iron',
+        c: 'thermal:rf_coil',
+        f: 'mysticalagriculture:machine_frame',
+        a: 'create:andesite_casing',
+        b: '#forge:workbenches'
+    })
+event.shaped('thermal:device_potion_diffuser', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:ingots/silver',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'tconstruct:splash_bottle'
+    })
+event.shaped('thermal:device_nullifier', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:ingots/tin',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: 'createdeco:andesite_bars',
+        b: 'minecraft:lava_bucket'
+    })
+event.shaped('thermal:device_collector', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:ingots/tin',
+        s: 'minecraft:hopper',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: '#forge:ender_pearls'
+    })
+event.shaped('thermal:device_rock_gen', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:ingots/invar',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: 'createdeco:andesite_bars',
+        b: 'create:mechanical_piston'
+    })
+event.shaped('thermal:device_water_gen', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:ingots/copper',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'minecraft:bucket'
+    })
+event.shaped('thermal:device_soil_infuser', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:treated_wood',
+        s: 'thermal:rf_coil',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'thermal:phytogro'
+    })
+event.shaped('thermal:device_composter', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:treated_wood',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'minecraft:composter'
+    })
+event.shaped('thermal:device_fisher', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:treated_wood',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'minecraft:fishing_rod'
+    })
+event.shaped('thermal:device_fisher', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:treated_wood',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'minecraft:fishing_rod'
+    })
+event.shaped('thermal:device_tree_extractor', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:treated_wood',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'minecraft:bucket'
+    })
+event.shaped('thermal:device_hive_extractor', [
+        'ibi',
+        'gfg',
+        'isi'
+    ], {
+        i: '#forge:treated_wood',
+        s: 'thermal:redstone_servo',
+        f: 'mysticalagriculture:machine_frame',
+        g: '#forge:glass',
+        b: 'minecraft:shears'
+    })
+event.shaped('2x immersiveengineering:connector_lv', [
+        'apa',
+        'ipi'
+    ], {
+        i: '#immersiveengineering:connector_insulator',
+        p: '#forge:plates/copper',
+        a: 'minecraft:air'
+    })
+event.shaped('3x immersiveengineering:connector_lv_relay', [
+        'apa',
+        'ipi',
+        'ipi'
+    ], {
+        i: '#immersiveengineering:connector_insulator',
+        p: '#forge:plates/copper',
+        a: 'minecraft:air'
+    })
+function TMachines(item1, item2, item3, component, gears, output) {
+event.shaped(output, [
+        'aca',
+        'qfb',
+        'gCg'
+    ], {
+        a: 'minecraft:air',
+        c: item3,
+        f: 'thermal:machine_frame',
+        g: gears,
+        q: item1,
+        b: item2,
+        C: component
+    })
+    }
+    TMachines('minecraft:smoker', 'minecraft:blast_furnace', 'extendedcrafting:redstone_ingot','immersiveengineering:component_electronic', '#forge:gears/copper', 'thermal:machine_furnace')
+    TMachines('create:empty_schematic', 'thermal:redstone_servo', '#forge:workbenches', 'immersiveengineering:component_electronic', '#forge:gears/copper', 'thermal:machine_crafter')
+    TMachines('create:mechanical_piston', 'thermal:redstone_servo', 'create:crushing_wheel', 'immersiveengineering:component_electronic', '#forge:gears/copper', 'thermal:machine_pulverizer')
+    TMachines('minecraft:lava_bucket', 'minecraft:lava_bucket', 'thermal:obsidian_glass', 'immersiveengineering:component_electronic', '#forge:gears/invar', 'thermal:machine_crucible')
+    TMachines('minecraft:water_bucket', 'minecraft:lava_bucket', 'create:basin', 'immersiveengineering:component_electronic', '#forge:gears/copper',' thermal:machine_bottler' )
+    TMachines('thermal:redstone_servo', 'mekanism:dynamic_tank', "create:mechanical_piston", 'immersiveengineering:component_electronic', '#forge:gears/constantan', 'thermal:machine_press')
+    TMachines('thermal:saw_blade', 'thermal:redstone_servo', 'minecraft:stonecutter', 'immersiveengineering:component_electronic','#forge:gears/copper', 'thermal:machine_sawmill')
+    TMachines('create:blaze_burner', 'create:mechanical_mixer', 'create:basin', 'immersiveengineering:component_electronic_adv', '#forge:gears/invar', 'thermal:machine_refinery')
+    TMachines('minecraft:blast_furnace', 'minecraft:blast_furnace', 'extendedcrafting:redstone_ingot', 'immersiveengineering:component_electronic_adv', '#forge:gears/invar','thermal:machine_smelter')
+    TMachines('thermal:phytogro', 'thermal:phytogro', 'minecraft:farmland', 'immersiveengineering:component_electronic_adv', '#forge:gears/lumium', 'thermal:machine_insolator')
+    TMachines('tconstruct:splash_bottle', 'tconstruct:lingering_bottle', 'minecraft:brewing_stand', 'immersiveengineering:component_electronic_adv', '#forge:gears/constantan', 'thermal:machine_brewer'),
+    TMachines('create:blaze_burner', 'create:blaze_burner', 'minecraft:brewing_stand', 'immersiveengineering:component_electronic_adv', '#forge:gears/constantan', 'thermal:machine_pyrolyzer')
+    TMachines('create:mechanical_mixer', 'minecraft:compass', 'create:basin', 'immersiveengineering:component_electronic_adv', '#forge:gears/constantan', 'thermal:machine_centrifuge')
+})

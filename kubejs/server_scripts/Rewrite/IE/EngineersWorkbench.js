@@ -3,7 +3,7 @@ event.custom({
   "type": "immersiveengineering:blueprint",
   "inputs": [
     {
-      "item": "create:electron_tube"
+      "item": "create:electron_tube",
     },
     {
       "tag": "forge:wires/electrum"

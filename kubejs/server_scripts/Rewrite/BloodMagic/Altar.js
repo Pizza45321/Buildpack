@@ -30,7 +30,7 @@ onEvent('recipes', event => {
 	event.custom({
   "type": "bloodmagic:altar",
   "input": {
-    "item": 'malum:soul_stained_steel_block'
+    "item": 'malum:block_of_soul_stained_steel'
   },
   "output": {
     "item": "bloodmagic:masterbloodorb"
@@ -59,7 +59,7 @@ onEvent('recipes', event => {
     "item": 'botania:elementium_block'
   },
   "output": {
-    "item": "bloodmagic::magicianbloodorb"
+    "item": "bloodmagic:magicianbloodorb"
   },
   "upgradeLevel": 2,
   "altarSyphon": 25000,
@@ -69,7 +69,7 @@ onEvent('recipes', event => {
 	event.custom({
   "type": "bloodmagic:altar",
   "input": {
-    "item": 'botania:livingrock'
+    "item": 'mna:stone_rune_blank'
   },
   "output": {
     "item": 'bloodmagic:blankslate'

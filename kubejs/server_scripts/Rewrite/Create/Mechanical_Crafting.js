@@ -71,21 +71,6 @@ onEvent('recipes', event => {
 			a: 'minecraft:air'
 
 		})
-	event.recipes.createMechanicalCrafting('create:mechanical_arm' , [
-		'aPrrAa',
-		'araAAA',
-		'araAaA',
-		'pcpaaa'
-		], 
-		{
-			p: '#forge:plates/iron',
-			A: 'create:andesite_alloy',
-			c: "create:brass_casing",
-			a: 'minecraft:air',
-			P: 'create:precision_mechanism',
-			r: '#forge:rods/brass'
-
-		})
 	event.recipes.createMechanicalCrafting('create:rotation_speed_controller' , [
 		'pPp',
 		'sSs',
@@ -97,6 +82,41 @@ onEvent('recipes', event => {
 			s: 'create:shaft',
 			S: "create:speedometer",
 			b: 'create:brass_casing'
-
 		})
+	function AdvMachines(output, in1, in2)  {
+		event.recipes.createMechanicalCrafting(output, [
+		'apdpa',
+		'phihp',
+		'dzmyd',
+		'HlcrH',
+		'aHdHa'
+		], 
+		{
+			p: '#forge:plastic',
+			H: 'mekanism:hdpe_sheet',
+			d: 'immersiveengineering:plate_duroplast',
+			a: 'minecraft:air',
+			z: in1, 
+			y: in2,
+			h: 'immersiveengineering:heavy_engineering',
+			l: 'immersiveengineering:light_engineering',
+			r: 'immersiveengineering:rs_engineering',
+			c: 'immersiveengineering:component_electronic_adv',
+			i: 'thermal:upgrade_augment_3',
+			m: '#industrialforegoing:machine_frame/advanced'
+		})
+	}
+	AdvMachines('industrialforegoing:enchantment_factory', 'minecraft:enchanting_table', 'create_stuff_additions:heap_of_experience')
+	AdvMachines('industrialforegoing:enchantment_applicator', 'tconstruct:tinkers_anvil', 'mekanism:dynamic_tank')
+	AdvMachines('industrialforegoing:enchantment_extractor', 'immersiveengineering:grindingdisk', 'minecraft:bookshelf')
+	AdvMachines('industrialforegoing:enchantment_sorter', 'minecraft:bookshelf', 'thermal:item_filter_augment')
+	AdvMachines('industrialforegoing:mob_crusher', 'minecraft:diamond_sword', 'minecraft:diamond_axe')
+	AdvMachines('industrialforegoing:mob_duplicator', 'hostilenetworks:sim_chamber', 'hostilenetworks:blank_data_model')
+	AdvMachines('industrialforegoing:material_stonework_factory	', 'extendedcrafting:advanced_table', 'minecraft:blast_furnace')
+	AdvMachines('industrialforegoing:washing_factory', 'minecraft:raw_iron', 'industrialforegoing:meat_feeder')
+	AdvMachines('industrialforegoing:fluid_sieving_machine', 'createdeco:andesite_bars', 'createdeco:andesite_bars')
+	AdvMachines('industrialforegoing:potion_brewer', 'minecraft:brewing_stand', 'minecraft:nether_wart')
+	AdvMachines('industrialforegoing:infinity_charger', 'thermal:energy_cell', 'thermal:rf_coil')
+	AdvMachines('industrialforegoing:stasis_chamber', 'minecraft:nether_star', 'minecraft:soul_sand')
+	AdvMachines('industrialforegoing:wither_builder', 'minecraft:wither_skeleton_skull', 'minecraft:wither_skeleton_skull')
 })

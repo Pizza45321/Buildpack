@@ -144,13 +144,13 @@ event.custom({
       "item": "thermal:enderium_glass"
     },
     "E": {
-      "item": "thermal:netherite_plate"
+      "item": "extendedcrafting:ender_component"
     },
     "F": {
       "item": "industrialforegoing:machine_frame_advanced"
     },
     "G": {
-      "item": "thermal:rf_coil"
+      "item": "immersiveengineering:component_electronic_adv"
     }
   },
   "result": {
@@ -180,13 +180,13 @@ event.custom({
       "item": "minecraft:chest"
     },
     "E": {
-      "item": "thermal:netherite_plate"
+      "item": "extendedcrafting:ender_component"
     },
     "F": {
       "item": "industrialforegoing:machine_frame_advanced"
     },
     "G": {
-      "item": "thermal:rf_coil"
+      "item": "immersiveengineering:component_electronic_adv"
     }
   },
   "result": {
@@ -219,6 +219,42 @@ event.custom({
   },
   "result": {
     "item": "malum:spirit_altar"
+  }
+})
+event.custom({
+  "type": "extendedcrafting:shaped_table",
+  "pattern": [
+    "AABAA",
+    "ACDCA",
+    "BCECB",
+    "FCGCF",
+    "FFBFF"
+  ],
+  "key": {
+    "A": {
+      "item": "industrialforegoing:plastic"
+    },
+    "B": {
+      "item": "immersiveengineering:plate_duroplast"
+    },
+    "C": {
+      "item": "create:fluid_tank"
+    },
+    "D": {
+      "item": "minecraft:chest"
+    },
+    "E": {
+      "item": "industrialforegoing:machine_frame_pity"
+    },
+    "F": {
+      "item": "mekanism:hdpe_sheet"
+    },
+    "G": {
+      "item": "immersiveengineering:component_electronic_adv"
+    }
+  },
+  "result": {
+    "item": "industrialforegoing:dissolution_chamber"
   }
 })
 })

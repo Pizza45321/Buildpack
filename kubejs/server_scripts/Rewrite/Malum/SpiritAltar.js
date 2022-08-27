@@ -163,8 +163,8 @@ onEvent("recipes", event => {
       "count": tCount1
     },
     {
-      "type": type1,
-      "count": tCount1
+      "type": type2,
+      "count": tCount2
     }
   ]
 })}

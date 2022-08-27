@@ -11,11 +11,15 @@ event.recipes.createMixing( Fluid.of("materialis:molten_shadow_steel" , 180),[
 	'#forge:dusts/quartz',
 	'#forge:dusts/obsidian',
 	'thermal:basalz_powder',
-		Fluid.of('materialis:molten_refined_obsidian', 1000)]
+		Fluid.of('tconstruct:molten_refined_obsidian', 1000)]
 		)
 event.recipes.createMixing("create:shadow_steel",[
 		"create:chromatic_compound",
 		Fluid.of('materialis:molten_shadow_steel', 90)]
+		)
+event.recipes.createMixing("create:refined_radiance",[
+		"create:chromatic_compound",
+		Fluid.of('materialis:molten_refined_radiance', 90)]
 		)
 event.recipes.createMixing("3x extendedcrafting:luminessence",[
 '#forge:dusts/mana',

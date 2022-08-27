@@ -15,6 +15,11 @@ onEvent('recipes', event => {
 	event.shapeless('farmersdelight:steak_and_potatoes', ['minecraft:baked_potato', '#forge:cooked_beef', 'minecraft:bowl', '#forge:crops/onion', 'farmersdelight:cooked_rice'])
 	event.shapeless('delightful:cheeseburger', ['farmersdelight:hamburger', '#forge:cheese_or_milk'])
 	event.shapeless('delightful:cheeseburger', ['#forge:bread', '#forge:cheese_or_milk', '#forge:salad_ingredients','#forge:crops/tomato', '#forge:crops/onion'])
-	event.shapeless('2x farmersdelight:barbecue_stick', ['#forge:crops/onion','#forge:crops/tomato', '#forge:cooked_beef', '#forge:cooked_chicken','#forge:rods/wooden','#delightfulforge:rods/wooden' ])
+	event.shapeless('2x farmersdelight:barbecue_stick', ['#forge:crops/onion','#forge:crops/tomato', '#forge:cooked_beef', '#forge:cooked_chicken','#forge:rods/wooden','#forge:rods/wooden' ])
 	event.shapeless('farmersdelight:hamburger', '#forge:bread', '#forge:cooked_beef', '#forge:salad_ingredients', '#forge:crops/tomato', '#forge:crops/onion')
+	event.shapeless('industrialforegoing:fluid_collector', 'industrialforegoing:fluid_placer')
+	event.shapeless('industrialforegoing:fluid_placer','industrialforegoing:fluid_collector')
+	event.shapeless('industrialforegoing:block_breaker','industrialforegoing:block_placer')
+	event.shapeless('industrialforegoing:block_placer','industrialforegoing:block_breaker')
+
 })

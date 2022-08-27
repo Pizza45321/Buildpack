@@ -11,10 +11,10 @@ onEvent('recipes', event => {
       "tag": "forge:plastic"
     },
     {
-      "item": "minecraft:nether_brick"
+      "item": "mekanism:hdpe_rod"
     },
     {
-      "item": "minecraft:nether_brick"
+      "item": "mekanism:hdpe_rod"   
     },
     {
       "tag": "forge:ingots/steel"
@@ -280,10 +280,52 @@ function RSParts(output, processor, partTag, processingTime) {
   },
   "type": "industrialforegoing:dissolution_chamber"
 })}
+    function SimpleMachines(output, a, b, processingTime) {
+    event.custom({
+  "input": [
+    {
+      "tag": 'forge:plastic'
+    },
+    {
+      "item": "immersiveengineering:component_electronic"
+    },
+    {
+      "tag": 'forge:plastic'
+    },
+    {
+      "item": a
+    },
+    {
+      "item": b
+    },
+    {
+      "item": 'mekanism:hdpe_sheet'
+    },
+    {
+      "tag": 'industrialforegoing:machine_frame/simple'
+    },
+    {
+      "item": 'mekanism:hdpe_sheet'
+    }
+  ],
+  "inputFluid": "{FluidName:\"tconstruct:molten_cobalt\",Amount:180}",
+  "processingTime": processingTime,
+  "output": {
+    "item": output,
+    "count": 1
+  },
+  "type": "industrialforegoing:dissolution_chamber"
+})}
+    SimpleMachines('industrialforegoing:plant_sower', 'minecraft:flower_pot', 'minecraft:iron_hoe', 300)
+    SimpleMachines('industrialforegoing:plant_gatherer', 'minecraft:iron_axe', 'minecraft:iron_hoe', 300)
+    SimpleMachines('industrialforegoing:plant_fertilizer', 'industrialforegoing:fertilizer', 'minecraft:farmland', 300)
+    SimpleMachines('industrialforegoing:mob_slaughter_factory', 'minecraft:iron_sword', 'minecraft:iron_axe', 300)
+    SimpleMachines('industrialforegoing:hydroponic_bed', 'minecraft:iron_hoe', 'farmersdelight:rich_soil_farmland', 300)
+    SimpleMachines('industrialforegoing:spores_recreator', 'minecraft:brown_mushroom', 'minecraft:red_mushroom', 300)
     RSParts('extradisks:1024k_storage_part', 'refinedstorage:advanced_processor', 'refinedstorage:parts/items/256k', 120)
     RSParts('extradisks:4096k_storage_part', 'refinedstorage:advanced_processor', 'refinedstorage:parts/items/1024k', 120)
     RSParts('extradisks:16384k_storage_part', 'rebornstorage:super_advanced_processor', 'refinedstorage:parts/items/4096k', 240)
-    RSParts('extradisks:65536k_storage_part', 'rebornstorage:super_advanced_processor', 'refinedstorage:parts/items/10384k', 240)
+    RSParts('extradisks:65536k_storage_part', 'rebornstorage:super_advanced_processor', 'refinedstorage:parts/items/16384k', 240)
     RSParts('extradisks:262144k_storage_part', 'extrastorage:neural_processor', 'refinedstorage:parts/items/65536k', 360)
     RSParts('extradisks:1048576k_storage_part', 'extrastorage:neural_processor', 'refinedstorage:parts/items/262144k', 360)
     RSParts('extradisks:infinite_storage_part', 'extradisks:withering_processor', 'refinedstorage:parts/items/1048576k', 1200)

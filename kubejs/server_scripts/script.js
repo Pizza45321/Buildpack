@@ -13,6 +13,7 @@ onEvent('recipes', event => {
   event.replaceInput({},['farmersdelight:wheat_dough', 'create:dough'], '#forge:dough_wheat')
   event.replaceInput({},['industrialforegoing:dryrubber','thermal:rubber'], '#forge:rubber')
   event.replaceInput({},['culturaldelights:corn_dough', 'farmersrespite:nether_wart_sourdough'], '#forge:dough_corn')
+  event.replaceInput({},['thermal:eggplant', 'culturaldelights:eggplant', "#forge:crops/eggplant"])
 	})
 
 onEvent('tags.items', event => {
@@ -34,10 +35,4 @@ onEvent('tags.items', event => {
   event.add('refinedstorage:parts/fluids/4096k', 'refinedstorage:4096k_fluid_storage_part')
 	// Get the #forge:cobblestone tag collection and remove Mossy Cobblestone from it
 	// event.get('forge:cobblestone').remove('minecraft:mossy_cobblestone')
-})
-onEvent('item.pickup', event => {
-  Item.of('bpa:custom_mixer').Name('Custom Mixer Controller')
-  Item.of('bpa:advanced_coker').Name('Advanced Coker Controller')
-  Item.of('bpa:le_assembler').Name('Light Engineering Controller')
-  Item.of('bpa:he_assembler').Name('Heavy Engineering Controller')
 })
