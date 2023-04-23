@@ -27,6 +27,12 @@ event.custom({
       }
     },
     {
+      "count": 2,
+      "base_ingredient": {
+        "item": "createaddition:capacitor"
+      }
+    },
+    {
       "count": 3,
       "base_ingredient": {
         "tag": "forge:wires/aluminum"

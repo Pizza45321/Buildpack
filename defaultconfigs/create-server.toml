@@ -29,7 +29,7 @@
 	allowRegularCraftingInCrafter = true
 	# 
 	#Allow Firework Rockets with more than 9 ingredients to be crafted using Mechanical Crafters.
-	allowBiggerFireworksInCrafter = false
+	allowBiggerFireworksInCrafter = true
 	# 
 	#Allow any stonecutting recipes to be processed by a Mechanical Saw.
 	allowStonecuttingOnSaw = true
@@ -390,7 +390,7 @@
 [schematics]
 	# 
 	#Whether placing a Schematic directly in Creative Mode should replace world blocks with Air
-	creativePrintIncludesAir = false
+	creativePrintIncludesAir = true
 	# 
 	#[in KiloBytes]
 	#The maximum allowed file size of uploaded Schematics.
@@ -420,7 +420,7 @@
 		# 
 		#% of Schematicannon's Fuel filled by 1 Gunpowder.
 		#Range: 0.0 ~ 100.0
-		schematicannonGunpowderWorth = 20.0
+		schematicannonGunpowderWorth = 35.0
 		# 
 		#% of Schematicannon's Fuel used for each fired block.
 		#Range: 0.0 ~ 100.0
@@ -452,7 +452,7 @@
 	# 
 	#Amount of free Extendo Grip actions provided by one filled Copper Backtank. Set to 0 makes Extendo Grips unbreakable
 	#Range: > 0
-	maxExtendoGripActions = 1000
+	maxExtendoGripActions = 0
 	# 
 	#Amount of free Potato Cannon shots provided by one filled Copper Backtank. Set to 0 makes Potato Cannons unbreakable
 	#Range: > 0
@@ -475,7 +475,7 @@
 	# 
 	#Relative speed of a manually controlled Train compared to a Scheduled one.
 	#Range: 0.0 ~ 3.4028234663852886E38
-	manualTrainSpeedModifier = 0.75
+	manualTrainSpeedModifier = 0.80
 
 	# 
 	#Standard Trains
@@ -484,17 +484,17 @@
 		#[in Blocks/Second]
 		#The top speed of any assembled Train.
 		#Range: 0.0 ~ 3.4028234663852886E38
-		trainTopSpeed = 28.0
+		trainTopSpeed = 50.0
 		# 
 		#[in Blocks/Second]
 		#The top speed of Trains during a turn.
 		#Range: 0.0 ~ 3.4028234663852886E38
-		trainTurningTopSpeed = 14.0
+		trainTurningTopSpeed = 20.0
 		# 
 		#[in Blocks/SecondÂ²]
 		#The acceleration of any assembled Train.
 		#Range: 0.0 ~ 3.4028234663852886E38
-		trainAcceleration = 3.0
+		trainAcceleration = 2.5
 
 	# 
 	#Powered Trains
@@ -503,15 +503,15 @@
 		#[in Blocks/Second]
 		#The top speed of powered Trains.
 		#Range: 0.0 ~ 3.4028234663852886E38
-		poweredTrainTopSpeed = 40.0
+		poweredTrainTopSpeed = 100.0
 		# 
 		#[in Blocks/Second]
 		#The top speed of powered Trains during a turn.
 		#Range: 0.0 ~ 3.4028234663852886E38
-		poweredTrainTurningTopSpeed = 20.0
+		poweredTrainTurningTopSpeed = 35.0
 		# 
 		#[in Blocks/SecondÂ²]
 		#The acceleration of powered Trains.
 		#Range: 0.0 ~ 3.4028234663852886E38
-		poweredTrainAcceleration = 3.0
+		poweredTrainAcceleration = 5.0
 

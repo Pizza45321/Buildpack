@@ -22,6 +22,6 @@ onEvent('recipes', event =>{
 	Rolling('forge:ingots/silver', 'immersiveposts:stick_silver')
 	Rolling('forge:ingots/lead', 'immersiveposts:stick_lead')
 	Rolling('forge:ingots/brass', 'createaddition:brass_rod')
-	Rolling('material:plastic_material', 'mekanism:hdpe_rod')
+	Rolling('materialis:plastic_material', 'mekanism:hdpe_rod')
 	Rolling('forge:ingots/constantan', 'immersiveposts:stick_constantan')
 })

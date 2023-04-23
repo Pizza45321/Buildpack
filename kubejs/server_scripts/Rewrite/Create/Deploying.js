@@ -1,3 +1,3 @@
 onEvent('recipes', event => {
-	// event.recipes.createDeploying('output', ['input'])
+	event.recipes.createDeploying('bloodmagic:blankrune', ['mna:decoration/arcane_stone', 'bloodmagic:blankslate'])
 })

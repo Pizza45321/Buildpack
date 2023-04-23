@@ -11,6 +11,8 @@
 	allowOpeningOtherPlayerBackpacks = true
 	#Allows disabling item display settings. Primarily in cases where custom backpack model doesn't support showing the item. (Requires game restart to take effect)
 	itemDisplayDisabled = false
+	#List of blocks that inventory interaction upgrades can't interact with - e.g. "minecraft:shulker_box"
+	noInteractionBlocks = []
 
 	#Leather Backpack Settings
 	[common.leatherBackpack]
@@ -223,7 +225,7 @@
 	#Stack Upgrade Settings
 	[common.stackUpgrade]
 		#List of items that are not supposed to stack in storage even when stack upgrade is inserted. Item registry names are expected here.
-		nonStackableItems = []
+		nonStackableItems = ["minecraft:bundle", "minecraft:shulker_box", "minecraft:white_shulker_box", "minecraft:orange_shulker_box", "minecraft:magenta_shulker_box", "minecraft:light_blue_shulker_box", "minecraft:yellow_shulker_box", "minecraft:lime_shulker_box", "minecraft:pink_shulker_box", "minecraft:gray_shulker_box", "minecraft:light_gray_shulker_box", "minecraft:cyan_shulker_box", "minecraft:purple_shulker_box", "minecraft:blue_shulker_box", "minecraft:brown_shulker_box", "minecraft:green_shulker_box", "minecraft:red_shulker_box", "minecraft:black_shulker_box"]
 
 	#Smelting Upgrade Settings
 	[common.smeltingUpgrade]
@@ -406,4 +408,15 @@
 		#Ratio of slowness levels per every backpack above the maximum number allowed. (number of backpacks above the max gets multiplied by this number and ceiled)
 		#Range: 0.1 ~ 5.0
 		slownessLevelsPerAdditionalBackpack = 1.0
+		#Determines if active upgrades will only work in the backpack that's worn by the player. Active upgrades are for example magnet, pickup, cooking, feeding upgrades.
+		onlyWornBackpackTriggersUpgrades = false
+
+	#Advanced Refill Upgrade Settings
+	[common.advancedRefillUpgrade]
+		#Number of Advanced Refill Upgrade's filter slots
+		#Range: 1 ~ 20
+		filterSlots = 12
+		#Number of filter slots displayed in a row
+		#Range: 1 ~ 6
+		slotsInRow = 4
 

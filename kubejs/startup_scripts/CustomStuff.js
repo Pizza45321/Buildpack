@@ -1,17 +1,14 @@
 // priority: 0
-
-console.info('Hello, World! (You will only see this line once in console, during startup)')
-
 onEvent('item.registry', event => {
-	// Register new items here
-	// event.create('example_item').displayName('Example Item')
+	event.create('incomplete_component').displayName('Incomplete Component')
+	event.create('withering_processor').displayName('Withering Processor')
+	event.create('neural_processor').displayName('Neural Processor')
+	event.create('realm_rune').displayName('Rune of the Realms')
 })
-
 onEvent('block.registry', event => {
 	// Register new blocks here
-	// event.create('example_block').material('wood').hardness(1.0).displayName('Example Block')
+	event.create('empty_engineering').material('stone').hardness(1.0).displayName('Empty Engineering Frame')
 })
-
 onEvent('fluid.registry', event => {
 	event.create('pure_inferium').thickTexture(0x8DAD00).bucketColor(0x8DAD00).displayName('Pure Inferium')
 	event.create('pure_prudentium').thickTexture(0xB82D00).bucketColor(0xB82D00).displayName('Pure Prudentium')
@@ -22,4 +19,5 @@ onEvent('fluid.registry', event => {
 	event.create('c_biofuel').thinTexture(0x008200).bucketColor(0x008200).displayName('Crude Biofuel')
 	event.create('r_biofuel').thinTexture(0x00c800).bucketColor(0x00c800).displayName('Refined Biofuel')
 	event.create('p_biofuel').thinTexture(0x00ff00).bucketColor(0x00ff00).displayName('Perfected Biofuel')
+	event.create('s_acid').thinTexture(0x00ff00).bucketColor(0x00ff00).displayName('Sulfuric Acid')
 })

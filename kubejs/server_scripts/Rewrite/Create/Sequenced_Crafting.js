@@ -9,126 +9,61 @@ onEvent('recipes', event => {
   event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', 'bloodmagic:reagentbinding']),
   event.recipes.createPressing('create:brass_sheet',['create:brass_sheet'])
 ]).transitionalItem('create:brass_sheet').loops(2)
-
-  event.recipes.createSequencedAssembly([
+event.recipes.createSequencedAssembly([
+  'immersiveengineering:rs_engineering'
+], 'immersiveengineering:sheetmetal_iron', [
+  event.recipes.createDeploying('kubejs:empty_engineering', ['kubejs:empty_engineering', 'extendedcrafting:redstone_component']),
+  event.recipes.createDeploying('kubejs:empty_engineering', ['kubejs:empty_engineering', 'immersiveengineering:wirecoil_redstone']),
+  event.recipes.createFilling('kubejs:empty_engineering', ['kubejs:empty_engineering', Fluid.of("immersiveengineering:creosote", 1000)]),
+  event.recipes.createPressing('kubejs:empty_engineering',['kubejs:empty_engineering'])
+]).transitionalItem('kubejs:empty_engineering').loops(2)
+event.recipes.createSequencedAssembly([
   'immersiveengineering:light_engineering'
 ], 'immersiveengineering:sheetmetal_iron', [
-  event.recipes.createDeploying('immersiveengineering:sheetmetal_iron', ['immersiveengineering:sheetmetal_iron', 'immersiveengineering:component_iron']),
-  event.recipes.createDeploying('immersiveengineering:sheetmetal_iron', ['immersiveengineering:sheetmetal_iron', 'immersiveengineering:wirecoil_copper']),
-  event.recipes.createFilling('immersiveengineering:sheetmetal_iron', ['immersiveengineering:sheetmetal_iron', Fluid.of("immersiveengineering:creosote", 1000)]),
-  event.recipes.createPressing('immersiveengineering:sheetmetal_iron',['immersiveengineering:sheetmetal_iron'])
-]).transitionalItem('immersiveengineering:sheetmetal_iron').loops(2)
-
+  event.recipes.createDeploying('kubejs:empty_engineering', ['kubejs:empty_engineering', 'immersiveengineering:component_iron']),
+  event.recipes.createDeploying('kubejs:empty_engineering', ['kubejs:empty_engineering', 'immersiveengineering:wirecoil_copper']),
+  event.recipes.createFilling('kubejs:empty_engineering', ['kubejs:empty_engineering', Fluid.of("immersiveengineering:creosote", 1000)]),
+  event.recipes.createPressing('kubejs:empty_engineering',['kubejs:empty_engineering'])
+]).transitionalItem('kubejs:empty_engineering').loops(2)
   event.recipes.createSequencedAssembly(['immersiveengineering:heavy_engineering'
 ], 'immersiveengineering:sheetmetal_steel', [
-  event.recipes.createDeploying('immersiveengineering:sheetmetal_steel', ['immersiveengineering:sheetmetal_steel', 'immersiveengineering:component_steel']),
-  event.recipes.createDeploying('immersiveengineering:sheetmetal_steel', ['immersiveengineering:sheetmetal_steel', 'immersiveengineering:wirecoil_steel']),
-  event.recipes.createFilling('immersiveengineering:sheetmetal_steel', ['immersiveengineering:sheetmetal_steel', Fluid.of("immersiveengineering:creosote", 1000)]),
-  event.recipes.createPressing('immersiveengineering:sheetmetal_steel',['immersiveengineering:sheetmetal_steel'])
-]).transitionalItem('immersiveengineering:sheetmetal_steel').loops(2)
+  event.recipes.createDeploying('kubejs:empty_engineering', ['kubejs:empty_engineering', 'immersiveengineering:component_steel']),
+  event.recipes.createDeploying('kubejs:empty_engineering', ['kubejs:empty_engineering', 'immersiveengineering:wirecoil_steel']),
+  event.recipes.createFilling('kubejs:empty_engineering', ['kubejs:empty_engineering', Fluid.of("immersiveengineering:creosote", 1000)]),
+  event.recipes.createPressing('kubejs:empty_engineering',['kubejs:empty_engineering'])
+]).transitionalItem('kubejs:empty_engineering').loops(2)
   event.recipes.createSequencedAssembly(['4x immersiveengineering:component_iron'
 ], '#forge:plates/copper', [
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:plates/iron']),
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:gears/copper']),
-  event.recipes.createCutting('thermal:copper_plate',['thermal:copper_plate']),
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:nuggets/brass'])
-]).transitionalItem('thermal:copper_plate').loops(2)
+  event.recipes.createDeploying('kubejs:incomplete_component', ['kubejs:incomplete_component', '#forge:plates/iron']),
+  event.recipes.createDeploying('kubejs:incomplete_component', ['kubejs:incomplete_component', '#forge:gears/copper']),
+  event.recipes.createCutting('kubejs:incomplete_component',['kubejs:incomplete_component']),
+  event.recipes.createDeploying('kubejs:incomplete_component', ['kubejs:incomplete_component', '#forge:nuggets/brass'])
+]).transitionalItem('kubejs:incomplete_component').loops(2)
   event.recipes.createSequencedAssembly(['4x create:precision_mechanism'
 ], '#forge:plates/copper', [
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:plates/brass']),
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:gears/bronze']),
-  event.recipes.createCutting('thermal:copper_plate',['thermal:copper_plate']),
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:nuggets/iron'])
-]).transitionalItem('thermal:copper_plate').loops(2)
+  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', '#forge:plates/brass']),
+  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', '#forge:gears/bronze']),
+  event.recipes.createCutting('create:incomplete_precision_mechanism',['create:incomplete_precision_mechanism']),
+  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', '#forge:nuggets/iron'])
+]).transitionalItem('create:incomplete_precision_mechanism').loops(2)
   event.recipes.createSequencedAssembly(['4x immersiveengineering:component_steel'
 ], '#forge:plates/copper', [
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:plates/steel']),
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:gears/invar']),
-  event.recipes.createCutting('thermal:copper_plate',['thermal:copper_plate']),
-  event.recipes.createDeploying('thermal:copper_plate', ['thermal:copper_plate', '#forge:nuggets/electrum'])
-]).transitionalItem('thermal:copper_plate').loops(2)
-  event.recipes.createSequencedAssembly(['thermal:upgrade_augment_2'
-], '#forge:plates/brass', [
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', '#forge:plates/signalum']),
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', '#forge:gears/lumium']),
-  event.recipes.createFilling('create:brass_sheet', ['create:brass_sheet',  Fluid.of('thermal:glowstone', 100)]),
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', 'thermal:obsidian_glass'])
-]).transitionalItem('create:brass_sheet').loops(2)
-  event.recipes.createSequencedAssembly(['thermal:upgrade_augment_1'
-], '#forge:plates/brass', [
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', '#forge:plates/steel']),
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', '#forge:gears/electrum']),
-  event.recipes.createFilling('create:brass_sheet', ['create:brass_sheet', Fluid.of('thermal:redstone', 100)]),
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', 'thermal:obsidian_glass'])
-]).transitionalItem('create:brass_sheet').loops(2)
-  event.recipes.createSequencedAssembly(['thermal:upgrade_augment_3'
-], '#forge:plates/brass', [
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', '#forge:plates/enderium']),
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', '#forge:gears/netherite']),
-  event.recipes.createFilling('create:brass_sheet', ['create:brass_sheet', Fluid.of('thermal:ender', 100)]),
-  event.recipes.createDeploying('create:brass_sheet', ['create:brass_sheet', 'thermal:obsidian_glass'])
-]).transitionalItem('create:brass_sheet').loops(2)
+  event.recipes.createDeploying('kubejs:incomplete_component', ['kubejs:incomplete_component', '#forge:plates/steel']),
+  event.recipes.createDeploying('kubejs:incomplete_component', ['kubejs:incomplete_component', '#forge:gears/invar']),
+  event.recipes.createCutting('kubejs:incomplete_component',['kubejs:incomplete_component']),
+  event.recipes.createDeploying('kubejs:incomplete_component', ['kubejs:incomplete_component', '#forge:nuggets/electrum'])
+]).transitionalItem('kubejs:incomplete_component').loops(2)
 	event.recipes.createSequencedAssembly([
   'industrialforegoing:machine_frame_advanced',
 ], 'industrialforegoing:machine_frame_simple', [
-  event.recipes.createDeploying('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple','#forge:gears/diamond']),
-  event.recipes.createDeploying('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple', 'industrialforegoing:plastic']),
-  event.recipes.createDeploying('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple', 'mekanism:hdpe_sheet']),
+  event.recipes.createDeploying('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple','#forge:ingots/pink_slime']),
+  event.recipes.createDeploying('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple', '#forge:gears/lumium']),
+  event.recipes.createDeploying('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple', '#forge:ingots/refined_glowstone']),
   event.recipes.createFilling('industrialforegoing:machine_frame_simple', ['industrialforegoing:machine_frame_simple', Fluid.of("tconstruct:molten_debris", 144)]),
   event.recipes.createPressing('industrialforegoing:machine_frame_simple',['industrialforegoing:machine_frame_simple'])
 ]).transitionalItem('industrialforegoing:machine_frame_simple').loops(1)
   event.recipes.createSequencedAssembly([
-  '3x immersiveengineering:connector_mv'
-], 'immersiveengineering:connector_lv', [
-  event.recipes.createDeploying('immersiveengineering:connector_lv', ['immersiveengineering:connector_lv','#forge:plates/electrum']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv', ['immersiveengineering:connector_lv', 'immersiveengineering:wirecoil_electrum']),
-  event.recipes.createPressing('immersiveengineering:connector_lv',['immersiveengineering:connector_lv']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv', ['immersiveengineering:connector_lv', 'immersiveengineering:wirecoil_electrum'])
-]).transitionalItem('immersiveengineering:connector_lv').loops(0)
-  event.recipes.createSequencedAssembly([
-  '3x immersiveengineering:connector_mv_relay'
-], 'immersiveengineering:connector_lv_relay', [
-  event.recipes.createDeploying('immersiveengineering:connector_lv_relay', ['immersiveengineering:connector_lv_relay','#forge:plates/electrum']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv_relay', ['immersiveengineering:connector_lv_relay', 'immersiveengineering:wirecoil_electrum']),
-  event.recipes.createPressing('immersiveengineering:connector_lv_relay',['immersiveengineering:connector_lv_relay']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv_relay', ['immersiveengineering:connector_lv_relay', 'immersiveengineering:wirecoil_electrum'])
-]).transitionalItem('immersiveengineering:connector_lv_relay').loops(0)
-  event.recipes.createSequencedAssembly([
-  '3x immersiveengineering:connector_hv'
-], 'immersiveengineering:connector_lv', [
-  event.recipes.createDeploying('immersiveengineering:connector_lv', ['immersiveengineering:connector_lv','#forge:plates/aluminum']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv', ['immersiveengineering:connector_lv', 'immersiveengineering:wirecoil_steel']),
-  event.recipes.createPressing('immersiveengineering:connector_lv',['immersiveengineering:connector_lv']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv', ['immersiveengineering:connector_lv', 'immersiveengineering:wirecoil_steel'])
-]).transitionalItem('immersiveengineering:connector_lv').loops(0)
-  event.recipes.createSequencedAssembly([
-  '3x immersiveengineering:connector_hv_relay'
-], 'immersiveengineering:connector_lv_relay', [
-  event.recipes.createDeploying('immersiveengineering:connector_lv_relay', ['immersiveengineering:connector_lv_relay','#forge:plates/aluminum']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv_relay', ['immersiveengineering:connector_lv_relay', 'immersiveengineering:wirecoil_steel']),
-  event.recipes.createPressing('immersiveengineering:connector_lv_relay',['immersiveengineering:connector_lv_relay']),
-  event.recipes.createDeploying('immersiveengineering:connector_lv_relay', ['immersiveengineering:connector_lv_relay', 'immersiveengineering:wirecoil_steel'])
-]).transitionalItem('immersiveengineering:connector_lv_relay').loops(0)
-  event.recipes.createSequencedAssembly([
-  'mekanism:advanced_control_circuit'
-], 'mekanism:basic_control_circuit', [
-  event.recipes.createDeploying('mekanism:basic_control_circuit', ['mekanism:basic_control_circuit','create:precision_mechanism']),
-  event.recipes.createDeploying('mekanism:basic_control_circuit', ['mekanism:basic_control_circuit', 'mekanism:alloy_infused'])
-  ]).transitionalItem('mekanism:basic_control_circuit').loops(0)
-  event.recipes.createSequencedAssembly([
-  'mekanism:elite_control_circuit'
-], 'mekanism:advanced_control_circuit', [
-  event.recipes.createDeploying('mekanism:advanced_control_circuit', ['mekanism:advanced_control_circuit', 'immersiveengineering:component_electronic']),
-  event.recipes.createDeploying('mekanism:advanced_control_circuit', ['mekanism:advanced_control_circuit', 'mekanism:alloy_reinforced'])
-  ]).transitionalItem('mekanism:advanced_control_circuit').loops(0)
-  event.recipes.createSequencedAssembly([
-  'mekanism:ultimate_control_circuit'
-], 'mekanism:elite_control_circuit', [
-  event.recipes.createDeploying('mekanism:elite_control_circuit', ['mekanism:elite_control_circuit','immersiveengineering:component_electronic_adv']),
-  event.recipes.createDeploying('mekanism:elite_control_circuit', ['mekanism:elite_control_circuit', 'mekanism:alloy_atomic'])
-  ]).transitionalItem('mekanism:advanced_control_circuit').loops(0)
-  event.recipes.createSequencedAssembly([
-  'bpa:advanced_coker'
+  'bpa:advanced_coke'
 ], 'immersiveengineering:cokebrick', [
   event.recipes.createDeploying('immersiveengineering:cokebrick', ['immersiveengineering:cokebrick', 'thermal:upgrade_augment_1']),
   event.recipes.createDeploying('immersiveengineering:cokebrick', ['immersiveengineering:cokebrick', 'immersiveengineering:component_electronic']),
@@ -136,11 +71,35 @@ onEvent('recipes', event => {
   event.recipes.createPressing('immersiveengineering:cokebrick',['immersiveengineering:cokebrick'])
 ]).transitionalItem('immersiveengineering:cokebrick').loops(0)
   event.recipes.createSequencedAssembly([
-  'bpa:custom_mixer'
-], 'create:brass_casing', [
-  event.recipes.createDeploying('create:brass_casing', ['create:brass_casing', 'create:whisk']),
-  event.recipes.createDeploying('create:brass_casing', ['create:brass_casing', 'immersiveengineering:component_electronic']),
-  event.recipes.createDeploying('create:brass_casing', ['create:brass_casing', '#forge:wires/copper']),
-  event.recipes.createPressing('create:brass_casing',['create:brass_casing'])
-]).transitionalItem('create:brass_casing').loops(0)
+  'industrialforegoing:pink_slime_ingot'
+], 'minecraft:iron_ingot', [
+  event.recipes.createDeploying('minecraft:iron_ingot', ['minecraft:iron_ingot', 'create:shadow_steel']),
+  event.recipes.createDeploying('minecraft:iron_ingot', ['minecraft:iron_ingot', 'create:refined_radiance']),
+  event.recipes.createFilling('minecraft:iron_ingot', ['minecraft:iron_ingot', Fluid.of("industrialforegoing:pink_slime", 1000)]),
+  event.recipes.createPressing('minecraft:iron_ingot',['minecraft:iron_ingot'])
+]).transitionalItem('minecraft:iron_ingot').loops(0)
+  event.recipes.createSequencedAssembly([
+  'create_sa:steam_engine'
+], '#forge:plates/brass', [
+  event.recipes.createDeploying('create_sa:incomplete_steam_engine', ['create_sa:incomplete_steam_engine', 'create:cogwheel']),
+  event.recipes.createDeploying('create_sa:incomplete_steam_engine', ['create_sa:incomplete_steam_engine', 'create:large_cogwheel']),
+  event.recipes.createDeploying('create_sa:incomplete_steam_engine', ['create_sa:incomplete_steam_engine', 'create_sa:fan_component']),
+  event.recipes.createDeploying('create_sa:incomplete_steam_engine', ['create_sa:incomplete_steam_engine', 'create:andesite_alloy'])
+]).transitionalItem('create_sa:incomplete_steam_engine').loops(2)
+  event.recipes.createSequencedAssembly([
+  'create_sa:heat_engine'
+], 'create:andesite_alloy', [
+  event.recipes.createDeploying('create_sa:incomplete_heat_engine', ['create_sa:incomplete_heat_engine', 'create:cogwheel']),
+  event.recipes.createDeploying('create_sa:incomplete_heat_engine', ['create_sa:incomplete_heat_engine', 'create:large_cogwheel']),
+  event.recipes.createDeploying('create_sa:incomplete_heat_engine', ['create_sa:incomplete_heat_engine', '#forge:nuggets/zinc']),
+  event.recipes.createDeploying('create_sa:incomplete_heat_engine', ['create_sa:incomplete_heat_engine', '#forge:nuggets/copper'])
+]).transitionalItem('create_sa:incomplete_heat_engine').loops(2)
+  event.recipes.createSequencedAssembly([
+  'create_sa:hydraulic_engine'
+], '#forge:plates/copper', [
+  event.recipes.createDeploying('create_sa:incomplete_hydraulic_engine', ['create_sa:incomplete_hydraulic_engine', 'create:cogwheel']),
+  event.recipes.createDeploying('create_sa:incomplete_hydraulic_engine', ['create_sa:incomplete_hydraulic_engine', 'create:large_cogwheel']),
+  event.recipes.createDeploying('create_sa:incomplete_hydraulic_engine', ['create_sa:incomplete_hydraulic_engine', 'create:andesite_alloy']),
+  event.recipes.createFilling('create_sa:incomplete_hydraulic_engine', ['create_sa:incomplete_hydraulic_engine', Fluid.of("immersiveengineering:creosote", 250)])
+]).transitionalItem('create_sa:incomplete_hydraulic_engine').loops(2)
 })

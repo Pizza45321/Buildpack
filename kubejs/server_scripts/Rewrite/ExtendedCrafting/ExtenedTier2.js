@@ -1,5 +1,41 @@
 onEvent('recipes', event => {
-event.custom({
+  event.custom({
+  "type": "extendedcrafting:shaped_table",
+  "pattern": [
+    " AB  ",
+    "ACDC ",
+    " AEA ",
+    " CFCA",
+    "  GA "
+  ],
+  "key": {
+    "A": {
+      "item": "botania:livingrock"
+    },
+    "B": {
+      "item": "minecraft:brewing_stand"
+    },
+    "C": {
+      "item": "malum:arcane_spirit"
+    },
+    "D": {
+      "item": "malum:earthen_spirit"
+    },
+    "E": {
+      "item": "botania:rune_mana"
+    },
+    "F": {
+      "item": "malum:aqueous_spirit"
+    },
+    "G": {
+      "item": "mna:animus_dust"
+    }
+  },
+  "result": {
+    "item": "botania:brewery"
+  }
+})
+  event.custom({
   "type": "extendedcrafting:shaped_table",
   "pattern": [
     "AAAAA",
@@ -52,73 +88,29 @@ event.custom({
 event.custom({
   "type": "extendedcrafting:shaped_table",
   "pattern": [
-    "ABABA",
-    "BCDCB",
-    "AEFEA",
-    "BCGCB",
-    "ABABA"
-  ],
-  "key": {
-    "A": {
-      "item": "createaddition:zinc_sheet"
-    },
-    "B": {
-      "item": "thermal:iron_plate"
-    },
-    "C": {
-      "item": "create:andesite_casing"
-    },
-    "D": {
-      "item": "extendedcrafting:redstone_ingot_block"
-    },
-    "E": {
-      "item": "mekanism:basic_fluid_tank"
-    },
-    "F": {
-      "item": "create:hose_pulley"
-    },
-    "G": {
-      "item": "thermal:drill_head"
-    }
-  },
-  "result": {
-    "item": "industrialforegoing:fluid_extractor"
-  }
-})
-event.custom({
-  "type": "extendedcrafting:shaped_table",
-  "pattern": [
     "AAAAA",
-    "ABCBA",
-    "ADEFA",
-    "ABGBA",
-    "AAAAA"
+    " BCB ",
+    "BDEDB"
   ],
   "key": {
     "A": {
-      "item": "createaddition:zinc_sheet"
+      "item": "botania:livingwood_planks_slab"
     },
     "B": {
-      "item": "thermal:iron_plate"
+      "item": "malum:runewood_planks"
     },
     "C": {
-      "item": "extendedcrafting:redstone_ingot"
+      "item": "immersiveengineering:craftingtable"
     },
     "D": {
-      "item": "mekanism:basic_fluid_tank"
+      "item": "malum:block_of_soulstone"
     },
     "E": {
-      "item": 'industrialforegoing:machine_frame_pity'
-    },
-    "F": {
-      "item": "thermal:redstone_servo"
-    },
-    "G": {
-      "item": "thermal:rf_coil"
+      "item": "malum:arcane_spirit"
     }
   },
   "result": {
-    "item": "industrialforegoing:latex_processing_unit"
+    "item": "malum:spirit_altar"
   }
 })
 event.custom({
@@ -191,70 +183,6 @@ event.custom({
   },
   "result": {
     "item": "hostilenetworks:loot_fabricator"
-  }
-})
-event.custom({
-  "type": "extendedcrafting:shaped_table",
-  "pattern": [
-    "AAAAA",
-    " BCB ",
-    "BDEDB"
-  ],
-  "key": {
-    "A": {
-      "item": "botania:livingwood_planks_slab"
-    },
-    "B": {
-      "item": "malum:runewood_planks"
-    },
-    "C": {
-      "item": "immersiveengineering:craftingtable"
-    },
-    "D": {
-      "item": "malum:block_of_soulstone"
-    },
-    "E": {
-      "item": "malum:arcane_spirit"
-    }
-  },
-  "result": {
-    "item": "malum:spirit_altar"
-  }
-})
-event.custom({
-  "type": "extendedcrafting:shaped_table",
-  "pattern": [
-    "AABAA",
-    "ACDCA",
-    "BCECB",
-    "FCGCF",
-    "FFBFF"
-  ],
-  "key": {
-    "A": {
-      "item": "industrialforegoing:plastic"
-    },
-    "B": {
-      "item": "immersiveengineering:plate_duroplast"
-    },
-    "C": {
-      "item": "create:fluid_tank"
-    },
-    "D": {
-      "item": "minecraft:chest"
-    },
-    "E": {
-      "item": "industrialforegoing:machine_frame_pity"
-    },
-    "F": {
-      "item": "mekanism:hdpe_sheet"
-    },
-    "G": {
-      "item": "immersiveengineering:component_electronic_adv"
-    }
-  },
-  "result": {
-    "item": "industrialforegoing:dissolution_chamber"
   }
 })
 })

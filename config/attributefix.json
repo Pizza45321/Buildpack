@@ -33,17 +33,6 @@
         "value": 10000000
       }
     },
-    "malum:soul_ward_shatter_cooldown": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 10000000
-      }
-    },
     "forge:nametag_distance": {
       "enabled": false,
       "min": {
@@ -132,6 +121,17 @@
         "value": 10000000
       }
     },
+    "lodestone:magic_proficiency": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "malum:heart_of_stone_strength": {
       "enabled": false,
       "min": {
@@ -165,6 +165,17 @@
         "value": 10000000
       }
     },
+    "malum:arcane_resonance": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "minecraft:generic.flying_speed": {
       "enabled": true,
       "min": {
@@ -184,17 +195,6 @@
       },
       "max": {
         "default": 1024,
-        "value": 10000000
-      }
-    },
-    "ortus:magic_resistance": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
         "value": 10000000
       }
     },
@@ -239,28 +239,6 @@
       },
       "max": {
         "default": 1024,
-        "value": 10000000
-      }
-    },
-    "ortus:magic_proficiency": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 10000000
-      }
-    },
-    "malum:spirit_reach": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
         "value": 10000000
       }
     },
@@ -319,6 +297,17 @@
         "value": 10000000
       }
     },
+    "lodestone:magic_resistance": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2048,
+        "value": 10000000
+      }
+    },
     "forge:swim_speed": {
       "enabled": false,
       "min": {
@@ -352,7 +341,7 @@
         "value": 10000000
       }
     },
-    "malum:scythe_proficiency": {
+    "lodestone:magic_damage": {
       "enabled": false,
       "min": {
         "default": 0,
@@ -363,7 +352,7 @@
         "value": 10000000
       }
     },
-    "ortus:magic_damage": {
+    "malum:scythe_proficiency": {
       "enabled": false,
       "min": {
         "default": 0,

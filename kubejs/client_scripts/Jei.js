@@ -1,7 +1,8 @@
 // priority: 0
 
-console.info('Client RELOADING')
+console.info('Removing Items From Jei')
 var itemsToRemove = [
+    'industrialforegoing:pitiful_generator',
     'extendedcrafting:basic_auto_table',
     'extendedcrafting:advanced_auto_table',
     'extendedcrafting:elite_auto_table',
@@ -58,10 +59,47 @@ var itemsToRemove = [
     'industrialforegoing:water_condensator',
     'createaddition:iron_rod', 
     'createaddition:gold_rod', 
-    'createaddition:copper_rod'
-]
+    'createaddition:copper_rod',
+    'mekanism:basic_bin', 
+    'mekanism:advanced_bin', 
+    'mekanism:elite_bin', 
+    'mekanism:ultimate_bin', 
+    'mekanism:creative_bin',
+    'industrialforegoing:conveyor_extraction_upgrade',
+    'industrialforegoing:conveyor_splitting_upgrade',
+    'industrialforegoing:conveyor_insertion_upgrade',
+    'industrialforegoing:conveyor_detection_upgrade',
+    'industrialforegoing:conveyor_bouncing_upgrade',
+    'industrialforegoing:conveyor_dropping_upgrade',
+    'industrialforegoing:conveyor_blinking_upgrade',
+    'industrialforegoing:conveyor'
+];
 onEvent('jei.hide.items', event => {
 	itemsToRemove.forEach(item => { 
 		event.hide(item)
 	})
 })
+onEvent("jei.hide.items", event => {
+  [
+    "controller",
+    "creative_controller",
+    "grid",
+    "crafting_grid",
+    "pattern_grid",
+    "fluid_grid",
+    "network_receiver",
+    "network_transmitter",
+    "relay",
+    "detector",
+    "security_manager",
+    "wireless_transmitter",
+    "disk_manipulator",
+    "crafter",
+    "crafter_manager",
+    "crafting_monitor"
+  ].forEach(item => {
+    Color.DYE.forEach(color => {
+      event.hide(`refinedstorage:${color}_${item}`);
+    });
+  });
+});

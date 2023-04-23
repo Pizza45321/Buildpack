@@ -12,6 +12,8 @@ onEvent('recipes', event=>{
   "mana": mana
 })
 	}
-ManaInfusion('minecraft:bucket', 'kubejs:lq_mana_bucket', 1,  100000)
+
+ManaInfusion('malum:soul_stained_steel_ingot', 'botania:manasteel_ingot',  3, 3000) 
+ManaInfusion('minecraft:bucket', 'kubejs:lq_mana_bucket', 1,  10000)
 
 })

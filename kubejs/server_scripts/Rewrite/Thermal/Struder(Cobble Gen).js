@@ -1,18 +1,17 @@
 onEvent('recipes', event => {
+function Rockgen(adjacent, output) {
 	event.custom({
 		'type': 'thermal:rock_gen',
-		'adjacent': 'minecraft:water',
-		'below': 'minecraft:blackstone',
+		'adjacent': adjacent,
+		'below': output,
 		'result': {
-			"item": "minecraft:blackstone"
+			"item": output
 		}
-	})
-	event.custom({
-		'type': 'thermal:rock_gen',
-		'adjacent': 'minecraft:lava',
-		'below': 'minecraft:ice',
-		'result': {
-			"item": "minecraft:magma_block"
-		}
-	})
+	})}
+	Rockgen('minecraft:water', 'minecraft:dripstone_block')
+	Rockgen('minecraft:water', 'minecraft:tuff')
+	Rockgen('minecraft:water', 'minecraft:calcite')
+	Rockgen('minecraft:water', 'minecraft:andesite')
+	Rockgen('minecraft:water', 'minecraft:diorite')
+	Rockgen('minecraft:water', 'minecraft:granite')
 })

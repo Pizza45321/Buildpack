@@ -11,11 +11,11 @@ onEvent("recipes", event => {
   },
   "extra_items": [
     {
-      "item": "malum:blazing_quartz",
+      "tag": "forge:gems/b_quartz",
       "count": 4
     },
     {
-      "item": "minecraft:blaze_powder",
+      "tag": "forge:dusts/blaze",
       "count": 4
     },
     {
@@ -37,7 +37,7 @@ onEvent("recipes", event => {
       "count": 16
     },
     {
-      "type": "eldritch",
+      "type": "wicked",
       "count": 16
     }
   ]
@@ -58,11 +58,11 @@ onEvent("recipes", event => {
       "count": 16
     },
     {
-      "item": "minecraft:lapis_lazuli",
+      "tag": "forge:gems/lapis",
       "count": 16
     },
     {
-      "item": "malum:hallowed_gold_ingot",
+      "tag": "forge:ingots/hallowed_gold",
       "count": 24
     },
     {
@@ -128,45 +128,498 @@ onEvent("recipes", event => {
     }
   ]
 })
-  function MalumAltar(input,[input1, count1,input2, count2,input3, count3,input4, count4],[type1, tCount1, type2, tCount2], output) {
   event.custom({
   "type": "malum:spirit_infusion",
   "input": {
-    "item": input,
+    "tag": "forge:ingots/rose_gold",
     "count": 1
   },
   "output": {
-    "item": output,
+    "item": "malum:whallowed_gold_ingot",
     "count": 1
   },
   "extra_items": [
     {
-      "item": input1,
-      "count": count1
+      "tag": "forge:gems/quartz",
+      "count": 8
     },
     {
-      "item": input2,
-      "count": count2
-    },
-    {
-      "item": input3,
-      "count": count3
-    },
-    {
-      "item": input4,
-      "count": count4
+      "tag": "#forge:gems/b_quartz",
+      "count": 4
     }
   ],
   "spirits": [
     {
-      "type": type1,
-      "count": tCount1
+      "type": "sacred",
+      "count": 6
     },
     {
-      "type": type2,
-      "count": tCount2
+      "type": "infernal",
+      "count": 2
+    },
+    {
+      "type": "arcane",
+      "count": 2
+    }
+  ]
+})
+  event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "mna:ritual_focus_lesser",
+    "count": 1
+  },
+  "output": {
+    "item": "malum:hallowed_spirit_resonator",
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "tag": "forge:ingots/hallowed_gold",
+      "count": 2
+    },
+    {
+      "tag": "forge:gems/b_quartz",
+      "count": 4
+    },
+    {
+      "tag": "forge:dusts/mana",
+      "count": 2
+    }
+  ],
+  "spirits": [
+    {
+      "type": "arcane",
+      "count": 8
+    },
+    {
+      "type": "aqueous",
+      "count": 4
+    },
+    {
+      "type": "earthen",
+      "count": 2
+    }
+  ]
+})
+  event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "mna:ritual_focus_greater",
+    "count": 1
+  },
+  "output": {
+    "item": 'malum:stained_spirit_resonator',
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "tag": "forge:ingots/soulsteel",
+      "count": 2
+    },
+    {
+      "item": "malum:chunk_of_brilliance",
+      "count": 4
+    },
+    {
+      "item": "botania:pixie_dust",
+      "count": 2
+    }
+  ],
+  "spirits": [
+    {
+      "type": "arcane",
+      "count": 8
+    },
+    {
+      "type": "aqueous",
+      "count": 4
+    },
+    {
+      "type": "earthen",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "minecraft:cauldron",
+    "count": 1
+  },
+  "output": {
+    "item": 'bloodmagic:demoncrucible',
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "item": 'bloodmagic:dungeon_metal',
+      "count": 1
+    },
+    {
+      "item": "bloodmagic:infusedslate",
+      "count": 10
+    }
+  ],
+  "spirits": [
+    {
+      "type": "eldritch",
+      "count": 12
+    },
+    {
+      "type": "infernal",
+      "count": 4
+    },
+    {
+      "type": "earthen",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "bloodmagic:soulgemlesser",
+    "count": 1
+  },
+  "output": {
+    "item": "bloodmagic:demonpylon",
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "item": 'bloodmagic:dungeon_metal',
+      "count": 1
+    },
+    {
+      "item": "bloodmagic:infusedslate",
+      "count": 10
+    },
+    {
+      "item": 'minecraft:iron_bars',
+      "count": 3
+    }
+  ],
+  "spirits": [
+    {
+      "type": "eldritch",
+      "count": 12
+    },
+    {
+      "type": "aqueous",
+      "count": 4
+    },
+    {
+      "type": "aerial",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "bloodmagic:soulforge",
+    "count": 1
+  },
+  "output": {
+    "item": "bloodmagic:demoncrystallizer",
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "item": 'bloodmagic:dungeon_metal',
+      "count": 1
+    },
+    {
+      "item": "bloodmagic:infusedslate",
+      "count": 10
+    }
+  ],
+  "spirits": [
+    {
+      "type": "eldritch",
+      "count": 12
+    },
+    {
+      "type": "arcane",
+      "count": 4
+    },
+    {
+      "type": "sacred",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "botania:mana_diamond",
+    "count": 1
+  },
+  "output": {
+    "item": "mysticalagriculture:infusion_crystal",
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "item": 'mysticalagriculture:prosperity_shard',
+      "count": 16
+    },
+    {
+      "item": 'mysticalagriculture:inferium_essence',
+      "count": 16
+    }
+  ],
+  "spirits": [
+    {
+      "type": "arcane",
+      "count": 16
+    },
+    {
+      "type": "earthen",
+      "count": 16
+    },
+    {
+      "type": "aqueous",
+      "count": 16
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "malum:corrupted_resonance",
+    "count": 1
+  },
+  "output": {
+    "item": "mysticalagriculture:master_infusion_crystal",
+    "count": 1
+  },
+  "extra_items": [
+    {
+      "item": 'mysticalagriculture:prosperity_block',
+      "count": 64
+    },
+    {
+      "item": 'mysticalagriculture:supremium_essence',
+      "count": 64
+    }
+  ],
+  "spirits": [
+    {
+      "type": "arcane",
+      "count": 64
+    },
+    {
+      "type": "earthen",
+      "count": 64
+    },
+    {
+      "type": "aqueous",
+      "count": 64
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "mna:bone_ash",
+    "count": 1
+  },
+  "extra_items": [],
+  "output": {
+    "item": "malum:hex_ash",
+    "count": 1
+  },
+  "spirits": [
+    {
+      "type": "arcane",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "botania:manaweave_cloth",
+    "count": 2
+  },
+  "output": {
+      "item": 'malum:spirit_fabric',
+      "count": 4
+    },
+    "extra_items": [{
+      "item": 'mna:infused_silk',
+      "count": 2
+    },
+    {
+      "item": 'malum:hex_ash',
+      "count": 1
+    }],
+  "spirits": [
+    {
+      "type": "wicked",
+      "count": 4
+    },
+    {
+      "type": "earthen",
+      "count": 2
+    },
+    {
+      "type": "aerial",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "botania:spell_cloth",
+    "count": 2
+  },
+  "output": {
+      "item": 'malum:astral_weave',
+      "count": 4
+    },
+    "extra_items": [{
+      "item": 'malum:spirit_fabric',
+      "count": 2
+    },
+    {
+      "item": "botania:pixie_dust",
+      "count": 1
+    }],
+  "spirits": [
+    {
+      "type": "sacred",
+      "count": 4
+    },
+    {
+      "type": "aqueous",
+      "count": 2
+    },
+    {
+      "type": "aerial",
+      "count": 2
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "tconstruct:foundry_controller",
+    "count": 1
+  },
+  "output": {
+      "item": 'malum:spirit_crucible',
+      "count": 1
+    },
+    "extra_items": [{
+      "item": 'mythicbotany:alfsteel_pylon',
+      "count": 2
+    },
+    {
+      "item": "botania:livingrock",
+      "count": 8
+    },
+    {
+      "item": "malum:tainted_rock",
+      "count": 8
+    },
+    {
+      "item": "mna:greater_mote_earth",
+      "count": 1
+    }],
+  "spirits": [
+    {
+      "type": "earthen",
+      "count": 20
+    },
+    {
+      "type": "arcane",
+      "count": 12
+    },
+    {
+      "type": "infernal",
+      "count": 12
+    },
+    {
+      "type": "sacred",
+      "count": 4
+    }
+  ]
+})
+   event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "item": "bloodmagic:ritualstone",
+    "count": 1
+  },
+  "output": {
+      "item": "bloodmagic:masterritualstone",
+      "count": 1
+    },
+    "extra_items": [{
+      "tag": 'forge:obsidian',
+      "count": 4
+    },
+    {
+      "item": "mna:superheated_purified_vinteum_ingot",
+      "count": 4
+    },
+    {
+      "item": "mna:stone_rune_blank",
+      "count": 2
+    }],
+  "spirits": [
+    {
+      "type": "infernal",
+      "count": 10
+    },
+    {
+      "type": "eldritch",
+      "count": 6
+    },
+    {
+      "type": "aerial",
+      "count": 6
+    }]
+})
+  function OreDupe(input, output) {
+  event.custom({
+  "type": "malum:spirit_infusion",
+  "input": {
+    "tag": input,
+    "count": 1
+  },
+  "output": {
+    "item": output,
+    "count": 3
+  },
+  "extra_items": [
+  {
+      "item": 'malum:etheric_nitrate',
+      "count": 1
+    }
+  ],
+  "spirits": [
+    {
+      "type": 'earthen',
+      "count": 4
+    },
+    {
+      "type": 'arcane',
+      "count": 4
     }
   ]
 })}
-  MalumAltar("botania:brewery", ["botania:elementium_ingot", 4, "minecraft:stone_bricks", 3, "bloodmagic:blankslate", 2, "mna:mote_arcane", 1], ["eldritch", 8, "infernal", 4], "bloodmagic:alchemytable")
+  OreDupe('forge:dusts/iron', 'malum:iron_node')
+  OreDupe('forge:dusts/copper', 'malum:copper_node')
+  OreDupe('forge:dusts/zinc', 'malum:zinc_node')
+  OreDupe('forge:dusts/gold', 'malum:gold_node')
+  OreDupe('forge:dusts/silver', 'malum:silver_node')
+  OreDupe('forge:dusts/nickel', 'malum:nickel_node')
+  OreDupe('forge:dusts/osmium', 'malum:osmium_node')
+  OreDupe('forge:dusts/uranium', 'malum:uranium_node')
+  OreDupe('forge:dusts/aluminum', 'malum:aluminum_node')
 })

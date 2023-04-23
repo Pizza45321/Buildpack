@@ -10,9 +10,11 @@
 	#If empty, all materials will show
 	showOnlyPartMaterial = ""
 	#If true, tables such as the part builder and tinker station will show all variants. If false shows only a variant with a default texture.
-	showAllTableVariants = true
+	showAllTableVariants = false
 	#If true, anvils will show all metal variants. If false, shows only a variant with the default texture
-	showAllAnvilVariants = true
+	showAllAnvilVariants = false
+	#If true, smeltery and foundry controllers, drains, ducts, and chutes will show all variants
+	showAllSmelteryVariants = false
 
 	#Tweaks to vanilla damage sources to better work with armor
 	[gameplay.damageTweaks]
@@ -24,6 +26,9 @@
 		falling_block = false
 		#Makes lightning count as fire damage
 		lightning = true
+		#Amount of durability restored by a repair kit in terms of ingots. Does not affect the cost to create the kit, that is controlled by JSON.
+		#Range: 0.0 ~ 32767.0
+		repairKitAmount = 2.0
 
 #Options related to recipes, limited options as a datapack allows most recipes to be modified
 [recipes]
@@ -115,6 +120,8 @@
 
 	#Options related to slime geodes
 	[worldgen.geodes]
+		#If true, recipes using slime crystals will ignore the other geode configs, useful if you add other ways to get the slime crystals. When false (default), recipes using slime crystals will be substituted for an alternative if the geode is disabled.
+		forceRecipes = false
 		#If true, earthslime geodes generate deep in the world as another way to get slime
 		earth = true
 		#If true, skyslime geodes generate above amethyst as another way to get skyslime
@@ -129,4 +136,7 @@
 	#If true, forces integration materials to be enabled, even if the relevant metal is missing. Useful for testing material balance.
 	#Does not provide recipes for any of them, they will only be available to cheat in creative.
 	forceIntegrationMaterials = false
+	#If STACKTRACE, logs the stacktrace whenever a tool stack is created from a non-modifiable item. If WARNING (default), logs a shorter but more efficient error. If IGNORE, disables logging (useful for modpacks/players *after* they reported the issue). The stacktrace helps debug which mod is causing it, but is rather expensive on the chance they are doing it a lot.
+	#Allowed Values: STACKTRACE, WARNING, IGNORED
+	logInvalidToolStack = "WARNING"
 

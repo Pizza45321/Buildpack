@@ -17,13 +17,27 @@
 			#Range: -2032 ~ 2031
 			"Max Y" = 80
 
+		[World.Ores.Apatite]
+			#Max number of veins per chunk; set to 0 to disable.
+			#Range: 0 ~ 64
+			"Vein Count" = 4
+			#Max size of the vein.
+			#Range: 1 ~ 64
+			"Vein Size" = 9
+			#Minimum Y spawn.
+			#Range: -2032 ~ 2031
+			"Min Y" = -16
+			#Maximum Y spawn.
+			#Range: -2032 ~ 2031
+			"Max Y" = 96
+
 		[World.Ores.Silver]
 			#Max number of veins per chunk; set to 0 to disable.
 			#Range: 0 ~ 64
 			"Vein Count" = 4
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 12
+			"Vein Size" = 8
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -60
@@ -37,7 +51,7 @@
 			"Vein Count" = 6
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 12
+			"Vein Size" = 8
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -60
@@ -51,7 +65,7 @@
 			"Vein Count" = 4
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 12
+			"Vein Size" = 8
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -40
@@ -65,7 +79,7 @@
 			"Vein Count" = 1
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 6
+			"Vein Size" = 5
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -16
@@ -79,7 +93,7 @@
 			"Vein Count" = 2
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 12
+			"Vein Size" = 7
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -16
@@ -93,7 +107,7 @@
 			"Vein Count" = 6
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 12
+			"Vein Size" = 9
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -20
@@ -107,7 +121,7 @@
 			"Vein Count" = 2
 			#Max size of the vein.
 			#Range: 1 ~ 64
-			"Vein Size" = 6
+			"Vein Size" = 7
 			#Minimum Y spawn.
 			#Range: -2032 ~ 2031
 			"Min Y" = -16

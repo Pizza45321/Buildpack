@@ -1,4 +1,7 @@
 onEvent('recipes', event => {
 	//event.recipes.mekanismCombining(out,bottomSlot,topSlot)
-	event.recipes.mekanismCombining('extradisks:advanced_machine_casing','refinedstorage:machine_casing','rebornstorage:super_advanced_processor')
+	[ Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:hepatizon"}'), , ]
+	event.recipes.mekanismCombining(Item.of('tconstruct:creative_slot', '{slot:"defense"}'),'mysticalagradditions:nether_star_shard', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:seared_brick"}'))
+	event.recipes.mekanismCombining(Item.of('tconstruct:creative_slot', '{slot:"abilities"}'),'mysticalagradditions:nether_star_shard', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:amethyst"}'))
+	event.recipes.mekanismCombining(Item.of('tconstruct:creative_slot', '{slot:"upgrades"}'),'mysticalagradditions:nether_star_shard', Item.of('extendedcrafting:singularity', '{Id:"extendedcrafting:glowstone"}'))
 })

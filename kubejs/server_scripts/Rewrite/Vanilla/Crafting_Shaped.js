@@ -1,17 +1,503 @@
+
+let MOD = (domain, id, x) => (x ? `${x}x ` : "") + (id.startsWith('#') ? '#' : "") + domain + ":" + id.replace('#', '')
+let RF = (id, x) => MOD("refinedstorage", id, x)
+let TE = (id, x) => MOD("thermal", id, x)
+let CR = (id, x) => MOD("create", id, x)
+let TC = (id, x) => MOD("tconstruct", id, x)
+let MC = (id, x) => MOD("minecraft", id, x)
+let KJ = (id, x) => MOD("kubejs", id, x)
+let FD = (id, x) => MOD("farmersdelight", id, x)
+let F = (id, x) => MOD("forge", id, x)
+let MK = (id, x) => MOD("mekanism", id, x)
+let MG = (id, x) => MOD("mekanismgenerators", id, x)
+let IM = (id, x) => MOD("immersiveengineering", id, x)
+let EX = (id, x) => MOD("extendedcrafting", id, x)
+
+
 onEvent('recipes', event => {
-    event.shaped('1x mekanism:metallurgic_infuser', [
+    event.shaped('mekanism:metallurgic_infuser', [
         'ara',
         'tsC',
         'gcg'
     ], {
-        c: 'immersiveengineering:component_electronic_adv',
-        s: 'mekanism:steel_casing',
-        r: 'create:spout',
-        t: 'create:item_vault',
-        C: 'mekanism:dynamic_tank',
-        a: "minecraft:air",
-        g: "#forge:gears/signalum"
+        c: IM('component_electronic_adv'),
+        s: MK('steel_casing'),
+        r: CR('spout'),
+        t: CR('item_vault'),
+        C: MK('dynamic_tank'),
+        g: F("#gears/signalum"),
+        a: "minecraft:air"        
     })
+    event.shaped('mekanism:personal_chest', [
+        'pgp',
+        'cCc',
+        'ppp'
+    ], {
+        p: F('#plates/steel'),
+        c: F('#chests'),
+        C: F('#circuits/basic'),
+        g: MG('reactor_glass')
+    })
+    event.shaped('mekanism:personal_barrel', [
+        'pgp',
+        'bCb',
+        'ppp'
+    ], {
+        p: F('#plates/steel'),
+        b: F('#barrels'),
+        C: F('#circuits/basic'),
+        g: MG('reactor_glass')
+    })
+    event.shaped('mekanism:energy_tablet', [
+        'par',
+        'apa',
+        'rap'
+    ], {
+        p: F('#plates/electrum'),
+        a: F('#alloys/advanced'),
+        r: EX('redstone_ingot')
+    })
+    event.shaped('mekanism:qio_dashboard', [
+        'pPp',
+        'PgP',
+        'ptp'
+    ], {
+        P: F('#pellets/polonium'),
+        p: F('#ingots/refined_obsidian'),
+        g: F('#glass_panes'),
+        t: MK('teleportation_core')
+    })
+    event.shaped('mekanism:qio_drive_base', [
+        'pcp',
+        'cPc',
+        'pcp'
+    ], {
+        P: F('#pellets/polonium'),
+        c: F('#circuits/ultimate'),
+        p: F('#plates/lead')
+    })
+    event.shaped('mekanism:flamethrower', [
+        'ttt',
+        'tgf',
+        'bcb'
+    ], {
+        t: '#forge:plates/tin',
+        g: 'mekanism:basic_chemical_tank',
+        f: 'minecraft:flint_and_steel',
+        b: '#forge:plates/bronze',
+        c: '#forge:circuits/advanced'
+    })
+    event.shaped('mekanism:jetpack_armored', [
+        'bpb',
+        'pjp',
+        'apa'
+    ], {
+        a: 'minecraft:air',
+        b: '#forge:storage_blocks/steel',
+        p: '#forge:plates/invar',
+        j: 'mekanism:jetpack'
+    })
+    event.shaped('mekanism:jetpack', [ 
+        'scs',
+        'btb',
+        'aba'
+    ], {
+        s: '#forge:plates/steel',
+        c: '#forge:circuits/basic',
+        b: '#forge:plates/bronze',
+        t: 'mekanism:basic_chemical_tank',
+        a: 'minecraft:air'
+    })
+    event.shaped('mekanism:scuba_mask', [
+        'sss',
+        'sgs',
+        'scs'
+    ], {
+        s: '#forge:plates/tin',
+        g: 'mekanism:basic_chemical_tank',
+        c: '#forge:plates/bronze'
+    })
+    event.shaped('mekanism:scuba_tank', [
+        'ata',
+        'AgA',
+        'bcb'
+    ], {
+        a: 'minecraft:air',
+        t: 'mekanism:basic_control_circuit',
+        A: '#forge:alloys/advanced',
+        g: 'mekanism:basic_chemical_tank',
+        b: 'create:copper_backtank', 
+        c: 'create:cogwheel'
+    })
+    event.shaped('mekanism:free_runners_armored', [
+        'aaa',
+        'rfr',
+        'bab'
+    ], {
+        f: 'mekanism:free_runners',
+        r: 'thermal:cured_rubber',
+        b: '#forge:storage_blocks/steel',  
+        a: 'minecraft:air'
+    })
+    event.shaped('mekanism:hazmat_mask', [
+        'ppp',
+        'pcp',
+        'aaa'
+    ], {
+        c: 'thermal:cured_rubber',
+        p: '#forge:plates/lead',  
+        a: 'minecraft:air'
+    })
+    event.shaped('mekanism:hazmat_gown', [
+        'pcp',
+        'ppp',
+        'ppp'
+    ], {
+        c: 'thermal:cured_rubber',
+        p: '#forge:plates/lead'
+    })
+    event.shaped('mekanism:hazmat_pants', [
+        'ppp',
+        'pcp',
+        'pap'
+    ], {
+        c: 'thermal:cured_rubber',
+        p: '#forge:plates/lead',  
+        a: 'minecraft:air'
+    })
+    event.shaped('mekanism:hazmat_boots', [
+        'aaa',
+        'cac',
+        'pap'
+    ], {
+        c: 'thermal:cured_rubber',
+        p: '#forge:plates/lead',  
+        a: 'minecraft:air'
+    })
+    event.shaped('2x mekanism:module_base', [
+        'dld',
+        'lhl',
+        'dld'
+    ], {
+        d: 'immersiveengineering:plate_duroplast',
+        l: '#forge:plates/lumium',  
+        h: 'mekanism:hdpe_sheet'
+    })
+    event.shaped('2x mekanism:upgrade_speed', [
+        'apa',
+        'AmA',
+        'apa'
+    ], {
+        m: 'mekanism:module_base',
+        p: '#forge:ingots/refined_obsidian',
+        A: '#forge:alloys/advanced',  
+        a: 'minecraft:air'
+    })
+    event.shaped('2x mekanism:upgrade_energy', [
+        'apa',
+        'AmA',
+        'apa'
+    ], {
+        m: 'mekanism:module_base',
+        p: '#forge:ingots/refined_glowstone',
+        A: '#forge:alloys/advanced',  
+        a: 'minecraft:air'
+    })
+    event.shaped('2x mekanism:upgrade_filter', [
+        'apa',
+        'AmA',
+        'apa'
+    ], {
+        m: 'mekanism:module_base',
+        p: '#forge:gears/bronze',
+        A: '#forge:alloys/advanced',  
+        a: 'minecraft:air'
+    })
+    event.shaped('2x mekanism:upgrade_muffling', [
+        'apa',
+        'AmA',
+        'apa'
+    ], {
+        m: 'mekanism:module_base',
+        p: '#forge:gears/steel',
+        A: '#forge:alloys/advanced',  
+        a: 'minecraft:air'
+    })
+    event.shaped('2x mekanism:upgrade_gas', [
+        'apa',
+        'AmA',
+        'apa'
+    ], {
+        m: 'mekanism:module_base',
+        p: '#forge:gears/invar',
+        A: '#forge:alloys/advanced',  
+        a: 'minecraft:air'
+    })
+    event.shaped('2x mekanism:upgrade_anchor', [
+        'apa',
+        'AmA',
+        'apa'
+    ], {
+        m: 'mekanism:module_base',
+        p: '#forge:gears/netherite',
+        A: '#forge:alloys/advanced',  
+        a: 'minecraft:air'
+    })
+    event.shaped('mekanism:electrolytic_core', [
+        'aoa',
+        'ibr',
+        'aoa'
+    ], {
+        r: '#forge:gears/rose_gold',
+        i: '#forge:gears/invar',
+        b: '#forge:circuits/basic', 
+        o: '#forge:ingots/osmium',
+        a: '#forge:alloys/advanced'
+    })
+    event.shaped('mekanism:energized_smelter', [
+        'rcr',
+        'pCi',
+        'rcr'
+    ], {
+        r: 'extendedcrafting:redstone_ingot',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:steel_casing', 
+        i: 'thermal:machine_smelter',
+        p: 'thermal:machine_pyrolyzer'
+    })
+    event.shaped('mekanism:enrichment_chamber', [
+        'rcr',
+        'gCg',
+        'rcr'
+    ], {
+        r: 'extendedcrafting:redstone_ingot',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:steel_casing', 
+        g: '#forge:gears/dragonsteel'
+    })
+    event.shaped('mekanism:purification_chamber', [
+        'rcr',
+        'gCg',
+        'rcr'
+    ], {
+        r: '#forge:alloys/advanced',
+        c: '#forge:circuits/advanced',
+        C: 'mekanism:enrichment_chamber', 
+        g: '#forge:gears/shellite'
+    })
+    event.shaped('mekanism:chemical_injection_chamber', [
+        'rcr',
+        'gCg',
+        'rcr'
+    ], {
+        r: '#forge:alloys/elite',
+        c: '#forge:circuits/elite',
+        C: 'mekanism:purification_chamber', 
+        g: '#forge:gears/twinite'
+    })
+    event.shaped('mekanism:combiner', [
+        'rcr',
+        'gCg',
+        'rcr'
+    ], {
+        r: '#forge:alloys/elite',
+        c: '#forge:circuits/elite',
+        C: 'mekanism:steel_casing', 
+        g: '#forge:gears/shellite'
+    })
+    event.shaped('mekanism:crusher', [
+        'rcr',
+        'pCp',
+        'rcr'
+    ], {
+        r: 'extendedcrafting:redstone_ingot',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:steel_casing', 
+        p: 'thermal:machine_pulverizer'
+    })
+    event.shaped('mekanism:logistical_sorter', [
+        'pPp',
+        'pcp',
+        'ppp'
+    ], {
+        P: 'create:mechanical_piston',
+        p: '#forge:plates/steel',
+        c: '#forge:circuits/basic'
+    })
+    event.shaped('mekanism:electric_pump', [
+        'wpw',
+        'aCa',
+        'oco'
+    ], {
+        w: 'create:cogwheel',
+        p: 'create:hose_pulley',
+        a: '#forge:circuits/advanced',
+        o: '#forge:ingots/osmium',
+        C: 'mekanism:steel_casing',
+        c: '#forge:alloys/advanced'
+    })
+    event.shaped('mekanism:electrolytic_separator', [
+        'rcr',
+        'pCp',
+        'rdr'
+    ], {
+        r: '#forge:plates/steel',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:electrolytic_core', 
+        p: 'mekanism:basic_chemical_tank',
+        d: 'mekanism:dynamic_tank'
+    })
+    event.shaped('mekanism:isotopic_centrifuge', [
+        'lrl',
+        'cCc',
+        'lrl'
+    ], {
+        c: '#forge:circuits/ultimate',
+        C: 'mekanism:basic_chemical_tank', 
+        l: '#forge:plates/lead',
+        r: '#forge:ingots/refined_obsidian'
+    })
+    event.shaped('mekanism:nutritional_liquifier', [
+        'lrl',
+        'cCc',
+        'lrl'
+    ], {
+        r: 'mekanism:canteen',
+        c: '#forge:circuits/ultimate',
+        C: 'mekanism:basic_chemical_tank', 
+        l: '#forge:plates/steel'
+    })
+    event.shaped('mekanism:supercharged_coil', [
+        'sss',
+        'clc',
+        'ppp'
+    ], {
+        s: '#forge:plates/signalum',
+        c: '#forge:circuits/ultimate',
+        p: '#forge:pellets/polonium', 
+        l: 'mekanism:laser'
+    })
+    event.shaped('mekanism:pressurized_reaction_chamber', [
+        'rar',
+        'cCc',
+        'pdp'
+    ], {
+        r: '#forge:plates/steel',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:enrichment_chamber', 
+        p: 'mekanism:basic_chemical_tank',
+        d: 'mekanism:dynamic_tank',
+        a: '#forge:alloys/advanced'
+    })
+    event.shaped('mekanism:precision_sawmill', [
+        'rcr',
+        'pCp',
+        'rcr'
+    ], {
+        r: '#forge:plates/steel',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:steel_casing', 
+        p: 'thermal:machine_sawmill'
+    })
+    event.shaped('mekanism:seismic_vibrator', [
+        'plp',
+        'sCs',
+        'pcp'
+    ], {
+        p: '#forge:plates/steel',
+        c: '#forge:circuits/basic',
+        C: 'mekanism:steel_casing', 
+        s: '#forge:alloys/advanced',
+        l: 'minecraft:lapis_block'
+    })
+    event.shaped('8x mekanism:basic_universal_cable', [
+        'ppp',
+        'rRr',
+        'ppp'
+    ], {
+        p: '#forge:plates/steel',
+        r: 'extendedcrafting:redstone_ingot',
+        R: '#forge:storage_blocks/redstone'
+    })
+    event.shaped('8x mekanism:basic_mechanical_pipe', [
+        'ppp',
+        'dtd',
+        'ppp'
+    ], {
+        p: '#forge:plates/steel',
+        d: 'mekanism:dynamic_tank',
+        t: 'create:fluid_tank'
+    })
+    event.shaped('8x mekanism:basic_pressurized_tube', [
+        'ppp',
+        'rhr',
+        'ppp'
+    ], {
+        p: '#forge:plates/steel',
+        h: '#thermal:glass/hardened',
+        r: 'mekanismgenerators:reactor_glass'
+    })
+    event.shaped('8x mekanism:basic_logistical_transporter', [
+        'ppp',
+        'aca',
+        'ppp'
+    ], {
+        p: '#forge:plates/steel',
+        a: 'immersiveengineering:component_electronic_adv',
+        c: '#forge:circuits/basic'
+    })
+    event.shaped('8x mekanism:basic_thermodynamic_conductor', [
+        'ppp',
+        'CcC',
+        'ppp'
+    ], {
+        p: '#forge:plates/steel',
+        c: '#forge:storage_blocks/copper',
+        C: '#forge:plates/constantan'
+    })
+        event.shaped('mekanism:oredictionificator', [
+            'pop',
+            'CcC',
+            'psp'
+        ], {
+            p: '#forge:plates/steel',
+            c: 'mekanism:steel_casing',
+            C: '#forge:circuits/basic',
+            o: 'mekanism:dictionary',
+            s: '#forge:chests/wooden'
+        })
+        event.shaped('mekanism:resistive_heater', [
+            'pcp',
+            'csc',
+            'pep'
+        ], {
+            p: '#forge:plates/bronze',
+            s: 'mekanism:steel_casing',
+            c: 'immersiveengineering:coil_hv',
+            e: 'mekanism:energy_tablet'
+        })
+        event.shaped('mekanism:fuelwood_heater', [
+            'pcp',
+            'SsS',
+            'pep'
+        ], {
+            p: '#forge:plates/bronze',
+            s: 'mekanism:steel_casing',
+            c: 'immersiveengineering:coil_hv',
+            e: 'mekanism:energy_tablet',
+            S: 'minecraft:smoker'
+        })
+        event.shaped('mekanism:formulaic_assemblicator', [
+            'pfp',
+            'csc',
+            'pep'
+        ], {
+            p: '#forge:plates/steel',
+            s: 'mekanism:steel_casing',
+            c: '#forge:circuits/basic',
+            e: 'mekanism:energy_tablet',
+            f: 'thermal:machine_crafter'
+        })
     event.shaped('2x thermal:rf_coil', [
         'aba',
         'cmc',
@@ -49,8 +535,7 @@ onEvent('recipes', event => {
         b: 'minecraft:bricks',
         c: '#forge:plates/copper',
         B: '#forge:plates/brass',
-        C: 'minecraft:campfire',
-
+        C: 'minecraft:campfire'
     })
     event.shaped('1x farmersdelight:cooking_pot', [
         'dsd',
@@ -76,16 +561,7 @@ onEvent('recipes', event => {
         r: '#forge:rods/iron'
 
     })
-    event.shaped('3x immersiveengineering:generator', [
-        'sps',
-        'pdp',
-        'sps'
-    ], {
-        s: '#forge:sheetmetals/steel',
-        p: '#forge:plates/electrum',
-        d: 'thermal:dynamo_stirling'
-
-    })
+    
     event.shaped('1x farmersdelight:skillet', [
         'aBc',
         'acB',
@@ -97,48 +573,48 @@ onEvent('recipes', event => {
         r: '#forge:rods/iron'
 
     })
-    event.shaped('1x immersiveengineering:rs_engineering', [
-        'ara',
-        'rsr',
-        'crc'
-    ], {
-        a: 'minecraft:air',
-        s: '#forge:sheetmetals/iron',
-        r: 'extendedcrafting:redstone_ingot',
-        c: '#forge:plates/copper'
-
-    })
-    event.shaped('1x immersiveengineering:dynamo', [
-        'CcC',
-        'brc',
-        'CcC'
-    ], {
-        b: 'create:windmill_bearing',
-        C: '#forge:plates/copper',
-        r: 'extendedcrafting:redstone_ingot',
-        c: 'immersiveengineering:wirecoil_copper'
-
-    })
-    event.shaped('1x create:empty_blaze_burner', [
+    event.shaped('create:empty_blaze_burner', [
         'aaa',
         'iai',
         'pCp'
     ], {
-        p: '#forge:plates/iron',
+        p: '#forge:plates/cast_iron',
         i: 'minecraft:iron_bars',
         a: 'minecraft:air',
         C: "minecraft:campfire"
 
+    })
+    event.shaped('create:electron_tube', [
+        'ngn',
+        'grg',
+        'pRp'
+    ], {
+        p: F('#plates/cast_iron'),
+        n: F('#nuggets/cast_iron'),
+        g: F('#glass'),
+        r: CR("polished_rose_quartz"),
+        R: EX("redstone_ingot")
+    })
+    event.shaped('createaddition:capacitor', [
+        'ngn',
+        'grg',
+        'pRp'
+    ], {
+        p: F('#plates/copper'),
+        n: F('#nuggets/copper'),
+        g: F('#plates/zinc'),
+        r: CR("polished_rose_quartz"),
+        R: EX("redstone_ingot")
     })
     event.shaped('thermal:fluid_cell_frame', [
         'Ggp',
         'geg',
         'pgG'
     ], {
-        p: '#forge:plates/copper',
-        G: '#forge:gears/iron',
-        g: '#forge:glass',
-        e: "immersiveengineering:light_engineering"
+        p: F('#plates/copper'),
+        G: F('#gears/iron'),
+        g: F('#glass'),
+        e: IM("light_engineering")
     })
     event.shaped('thermal:energy_cell_frame', [
         'Ggp',
@@ -155,7 +631,7 @@ onEvent('recipes', event => {
         'tet',
         'hrh'
     ], {
-        h: 'mekanism:hdpe_sheet',
+        h: '#forge:plastic',
         t: '#forge:treated_wood',
         r: 'thermal:rf_coil',
         s: "thermal:redstone_servo",
@@ -237,7 +713,7 @@ event.shaped('industrialforegoing:pity_black_hole_unit', [
     ], {
         f: '#industrialforegoing:machine_frame/pity',
         p: '#forge:plastic',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         e: 'hostilenetworks:end_prediction',
         k: 'refinedstorage:1k_storage_part',
         i: 'create:item_vault'
@@ -285,7 +761,7 @@ event.shaped('industrialforegoing:pity_black_hole_tank', [
     ], {
         f: '#industrialforegoing:machine_frame/pity',
         p: '#forge:plastic',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         e: 'hostilenetworks:end_prediction',
         k: 'refinedstorage:1k_storage_part',
         i: 'create:fluid_tank'
@@ -314,23 +790,17 @@ event.shaped('industrialforegoing:advanced_black_hole_tank', [
         k: 'refinedstorage:16k_storage_part',
         i: 'create:fluid_tank'
     })
-event.shaped('cabletiers:elite_importer', [
-        'ibi',
-        'bfb',
-        'ibi'
+event.shaped('industrialforegoing:supreme_black_hole_tank', [
+        'php',
+        'efe',
+        'kik'
     ], {
-        b: 'extrastorage:advanced_importer',
-        i: 'minecraft:iron_block',
-        f: 'refinedstorage:advanced_processor'
-    })
-event.shaped('cabletiers:elite_exporter', [
-        'ibi',
-        'bfb',
-        'ibi'
-    ], {
-        b: 'extrastorage:advanced_exporter',
-        i: 'minecraft:iron_block',
-        f: 'refinedstorage:advanced_processor'
+        f: '#industrialforegoing:machine_frame/supreme',
+        p: '#forge:plastic',
+        h: 'mekanism:hdpe_sheet',
+        e: 'hostilenetworks:end_prediction',
+        k: 'refinedstorage:64k_storage_part',
+        i: 'create:fluid_tank'
     })
 event.shaped('brewinandchewin:pizza', [
         'ccc',
@@ -434,7 +904,7 @@ event.shaped('industrialforegoing:block_breaker', [
         s: '#forge:tools/shovels',
         a: '#forge:tools/axes',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         P: '#forge:plastic'
     })
 event.shaped('industrialforegoing:fluid_collector', [
@@ -446,7 +916,7 @@ event.shaped('industrialforegoing:fluid_collector', [
         b: 'minecraft:bucket',
         t: 'create:fluid_tank',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         p: '#forge:plastic'
     })
 event.shaped('industrialforegoing:animal_feeder', [
@@ -459,7 +929,7 @@ event.shaped('industrialforegoing:animal_feeder', [
         a: 'farmersdelight:dog_food',
         t: 'immersiveengineering:treated_scaffold',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         p: '#forge:plastic'
     })
 event.shaped('industrialforegoing:animal_rancher', [
@@ -471,7 +941,7 @@ event.shaped('industrialforegoing:animal_rancher', [
         b: 'minecraft:shears',
         t: 'minecraft:bucket',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         p: '#forge:plastic'
     })
 event.shaped('industrialforegoing:animal_baby_separator', [
@@ -483,7 +953,7 @@ event.shaped('industrialforegoing:animal_baby_separator', [
         b: '#forge:dough_wheat',
         t: 'create:sweet_roll',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         p: '#forge:plastic'
     })
 event.shaped('industrialforegoing:sewage_composter', [
@@ -495,7 +965,7 @@ event.shaped('industrialforegoing:sewage_composter', [
         b: 'thermal:device_composter',
         t: 'thermal:upgrade_augment_2',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         p: '#forge:plastic'
     })
 event.shaped('industrialforegoing:sewer', [
@@ -507,7 +977,7 @@ event.shaped('industrialforegoing:sewer', [
         b: 'create:fluid_tank',
         t: 'create:item_drain',
         e: '#industrialforegoing:machine_frame/pity',
-        h: 'mekanism:hdpe_sheet',
+        h: 'immersiveengineering:plate_duroplast',
         p: '#forge:plastic'
     })
 event.shaped('thermal:charge_bench', [
@@ -669,8 +1139,372 @@ event.shaped('3x immersiveengineering:connector_lv_relay', [
         p: '#forge:plates/copper',
         a: 'minecraft:air'
     })
+event.shaped('botania:mana_spreader', [
+        'www',
+        'spr',
+        'www'
+    ], {
+        w: 'botania:livingwood',
+        s: 'mna:superheated_vinteum_ingot',
+        p: '#botania:petals',
+        r: 'malum:hallowed_spirit_resonator'
+    })
+event.shaped('botania:elven_spreader', [
+        'www',
+        'spr',
+        'www'
+    ], {
+        w: 'botania:dreamwood',
+        s: 'mna:superheated_purified_vinteum_ingot',
+        p: '#botania:petals',
+        r: 'malum:stained_spirit_resonator'
+    })
+event.shaped('botania:apothecary_default', [
+        'sps',
+        'eSa',
+        'SSS'
+    ], {
+        s: 'minecraft:stone_brick_slab',
+        p: '#botania:petals',
+        e: 'malum:earthen_spirit',
+        S: 'minecraft:stone_bricks',
+        a: 'malum:aqueous_spirit'
+    })
+event.shaped('botania:apothecary_mossy', [
+        'sps',
+        'eSa',
+        'SSS'
+    ], {
+        s: 'minecraft:mossy_stone_brick_slab',
+        p: '#botania:petals',
+        e: 'malum:earthen_spirit',
+        S: 'minecraft:mossy_stone_bricks',
+        a: 'malum:aqueous_spirit'
+    })
+event.shaped('bloodmagic:masterroutingnode', [
+        'sd',
+        'bg'
+    ], {
+        s: '#malum:spirits',
+        d: 'botania:mana_diamond',
+        b: '#forge:storage_blocks/steel',
+        g: 'mna:stone_rune_blank'
+    })
+event.shaped('bloodmagic:itemroutingnode', [
+        'gG',
+        'da'
+    ], {
+        g: 'mna:stone_rune_blank',
+        G: '#forge:glass',
+        d: '#forge:dusts/mana',
+        a: 'mna:arcane_ash'
+    })
+event.shaped('bloodmagic:inputroutingnode', [
+        'n',
+        'h'
+    ], {
+        n: 'bloodmagic:itemroutingnode',
+        h: 'botania:hopperhock'
+    })
+event.shaped('bloodmagic:soulforge', [
+        'sss',
+        'ama',
+        'ala'
+    ], {
+        a: '#mna:decoration/arcane_stone',
+        m: 'mna:mote_arcane',
+        l: 'malum:hallowed_spirit_resonator',
+        s: '#mna:decoration/arcane_stone_slab'
+    })
+event.shaped('hostilenetworks:blank_data_model', [
+        'cs',
+        'bw'
+    ], {
+        b: 'mekanism:basic_control_circuit',
+        w: '#forge:wires/lead',
+        c: 'immersiveengineering:component_electronic_adv',
+        s: 'minecraft:smooth_stone'
+    })
+event.shaped('mininggadgets:upgrade_empty', [
+        'cs',
+        'bw'
+    ], {
+        b: 'immersiveengineering:component_electronic_adv',
+        w: '#forge:wires/copper',
+        c: '#forge:gems/diamond',
+        s: 'minecraft:smooth_stone_slab'
+    })
+event.shaped('1x immersiveengineering:dynamo', [
+        'iri',
+        'Rca',
+        'iri'
+    ], {
+        a: 'createaddition:alternator',
+        c: 'immersiveengineering:coil_lv',
+        r: '#forge:rods/copper',
+        i: '#forge:plates/cast_iron',
+        R: 'extendedcrafting:redstone_ingot'
+})
+event.shaped('immersiveengineering:current_transformer', [
+        'ama',
+        'aAa',
+        'scs'
+    ], {
+        a: 'minecraft:air',
+        m: 'immersiveengineering:voltmeter',
+        A: 'immersiveengineering:capacitor_lv',
+        c: 'immersiveengineering:component_electronic',
+        s: '#forge:sheetmetals/iron'
+    })
+event.shaped('immersiveengineering:transformer', [
+        'lma',
+        'cAa',
+        'ssa'
+    ], {
+        a: 'minecraft:air',
+        m: 'immersiveengineering:connector_mv',
+        l: 'immersiveengineering:connector_lv',
+        c: 'immersiveengineering:component_electronic',
+        s: '#forge:sheetmetals/iron',
+        A: 'immersiveengineering:capacitor_mv'
+    })
+event.shaped('immersiveengineering:transformer_hv', [
+        'lma',
+        'cAa',
+        'ssa'
+    ], {
+        a: 'minecraft:air',
+        m: 'immersiveengineering:connector_hv',
+        l: 'immersiveengineering:connector_mv',
+        c: 'immersiveengineering:component_electronic_adv',
+        s: '#forge:sheetmetals/steel',
+        A: 'immersiveengineering:capacitor_hv'
+    })
+event.shaped('immersiveengineering:craftingtable', [
+        'sss',
+        'ScS',
+        'SeS'
+    ], {
+        a: 'minecraft:air',
+        c: '#forge:workbenches',
+        S: '#forge:rods/treated_wood',
+        s: '#forge:treated_wood_slab',
+        e: 'create:electron_tube'
+    })
+event.shaped('8x immersiveengineering:conveyor_basic', [
+        'aaa',
+        'bbb',
+        'iri'
+    ], {
+        a: 'minecraft:air',
+        i: '#forge:plates/cast_iron',
+        b: 'create:belt_connector',
+        r: 'extendedcrafting:redstone_ingot'
+    })
+event.shaped('3x immersiveengineering:conveyor_splitter', [
+        'aaa',
+        'viv',
+        'ava'
+    ], {
+        a: 'minecraft:air',
+        i: '#forge:plates/cast_iron',
+        v: 'immersiveengineering:conveyor_basic'
+    })
+event.shaped('3x immersiveengineering:conveyor_vertical', [
+        'via',
+        'vaa',
+        'via'
+    ], {
+        a: 'minecraft:air',
+        i: '#forge:plates/cast_iron',
+        v: 'immersiveengineering:conveyor_basic'
+    })
+event.shaped('immersiveengineering:workbench', [
+        'aaa',
+        'iss',
+        'baf'
+    ], {
+        a: 'minecraft:air',
+        i: '#forge:plates/cast_iron',
+        s: '#forge:treated_wood_slab',
+        b: 'immersiveengineering:craftingtable',
+        f: 'immersiveengineering:treated_fence'
+    })
+event.shaped('1x immersiveengineering:turntable', [
+        'aaa',
+        'ibi',
+        'rcr'
+    ], {
+        a: 'minecraft:air',
+        i: '#forge:plates/cast_iron',
+        b: 'immersiveengineering:wooden_barrel',
+        r: 'extendedcrafting:redstone_ingot',
+        c: 'immersiveengineering:coil_lv'
+    })
+event.shaped('1x immersiveengineering:capacitor_lv', [
+        'plp',
+        'ibi',
+        'plp'
+    ], {
+        a: 'minecraft:air',
+        i: '#forge:plates/cast_iron',
+        p: '#forge:treated_wood',
+        l: '#forge:plates/lead',
+        b: 'immersiveengineering:redstone_acid_bucket'
+    })
+event.shaped('1x immersiveengineering:capacitor_mv', [
+        'pnp',
+        'sbs',
+        'pip'
+    ], {
+        s: '#forge:plates/steel',
+        p: '#forge:treated_wood',
+        n: '#forge:plates/constantan',
+        i: '#forge:plates/cast_iron',
+        b: 'immersiveengineering:redstone_acid_bucket'
+    })
+event.shaped('1x immersiveengineering:capacitor_hv', [
+        'pAp',
+        'sbs',
+        'php'
+    ], {
+        s: '#forge:plates/steel',
+        p: '#forge:treated_wood',
+        h: '#forge:ingots/hop_graphite',
+        A: '#forge:plates/aluminum',
+        b: 'immersiveengineering:redstone_acid_bucket'
+    })
+event.shaped('1x immersiveengineering:furnace_heater', [
+        'iCi',
+        'rbr',
+        'ici'
+    ], {
+        i: '#forge:plates/cast_iron',
+        c: 'immersiveengineering:coil_lv',
+        C: 'immersiveengineering:component_electronic',
+        r: 'extendedcrafting:redstone_ingot',
+        b: 'immersiveengineering:metal_barrel'
+    })
+event.shaped('1x immersiveengineering:thermoelectric_generator', [
+        'sCs',
+        'rbr',
+        'scs'
+    ], {
+        s: '#forge:plates/steel',
+        c: 'immersiveengineering:coil_lv',
+        r: 'extendedcrafting:redstone_ingot',
+        b: 'immersiveengineering:metal_barrel',
+        C: '#forge:plates/constantan'
+    })
+event.shaped('1x immersiveengineering:charging_station', [
+        'gig',
+        'vrv',
+        'pcp'
+    ], {
+        g: '#forge:glass',
+        i: '#forge:plates/cast_iron',
+        r: 'extendedcrafting:redstone_ingot',
+        v: 'immersiveengineering:electron_tube',
+        c: 'immersiveengineering:coil_lv',
+        p: '#forge:treated_wood'
+    })
+event.shaped('1x immersiveengineering:sample_drill', [
+        'sSs',
+        'sfs',
+        'hfl'
+    ], {
+        s: '#immersiveengineering:scaffoldings/steel',
+        S: 'immersiveengineering:survey_tools',
+        f: '#forge:fences/steel',
+        h: 'immersiveengineering:heavy_engineering',
+        l: 'immersiveengineering:light_engineering'
+    })
+event.shaped('1x immersiveengineering:floodlight', [
+        'sii',
+        'pbr',
+        'smi'
+    ], {
+        s: '#forge:plates/silver',
+        i: '#forge:plates/cast_iron',
+        p: '#forge:glass_panes',
+        b: 'immersiveengineering:light_bulb',
+        r: 'extendedcrafting:redstone_ingot',
+        m: 'immersiveengineering:component_iron'
+    })
+event.shaped('4x immersiveengineering:generator', [
+        'srs',
+        'rbr',
+        'shs'
+    ], {
+        s: '#forge:sheetmetals/steel',
+        r: 'thermal:rf_coil',
+        b: 'immersiveengineering:metal_barrel',
+        h: 'immersiveengineering:coil_hv'
+
+    })
+event.shaped('4x immersiveengineering:radiator', [
+        'sis',
+        'ibi',
+        'sBs'
+    ], {
+        s: '#forge:sheetmetals/steel',
+        i: '#forge:plates/cast_iron',
+        b: 'immersiveengineering:metal_barrel',
+        B: 'minecraft:water_bucket'
+
+    })
+event.shaped('immersiveengineering:hammer', [
+        'ach',
+        'asc',
+        'saa'
+    ], {
+        a: 'minecraft:air',
+        h: 'immersiveengineering:hemp_fabric',
+        c: '#forge:storage_blocks/cast_iron',
+        s: '#forge:rods/treated_wood'
+
+    })
+event.shaped('immersiveengineering:wirecutter', [
+        'sac',
+        'hsa',
+        'sac'
+    ], {
+        a: 'minecraft:air',
+        h: 'immersiveengineering:hemp_fabric',
+        c: '#forge:storage_blocks/cast_iron',
+        s: '#forge:rods/treated_wood'
+    })
+event.shaped('immersiveengineering:screwdriver', [
+        'aar',
+        'ara',
+        'sha'
+    ], {
+        a: 'minecraft:air',
+        h: 'immersiveengineering:hemp_fabric',
+        r: '#forge:rods/copper',
+        s: '#forge:rods/treated_wood'
+    })
+})
+function TDynamos(item1, item2, output) {
+    onEvent('recipes', event  => {
+        event.shaped(output, [
+        'ama',
+        'qcb',
+        'rfr'
+    ], {
+        a: 'minecraft:air',
+        c: IM('coil_hv'),
+        f: TE('machine_frame'),
+        r: TE('rf_coil'),
+        q: item1,
+        b: item2,
+        f: 'mysticalagriculture:machine_frame',
+        m: 'createaddition:electric_motor'
+    })
+    })}
 function TMachines(item1, item2, item3, component, gears, output) {
-event.shaped(output, [
+    onEvent('recipes', event  => {
+        event.shaped(output, [
         'aca',
         'qfb',
         'gCg'
@@ -683,11 +1517,18 @@ event.shaped(output, [
         b: item2,
         C: component
     })
+    })
     }
+    TDynamos(CR('blaze_burner'), CR('blaze_burner'), TE('dynamo_magmatic'))
+    TDynamos(FD('horse_feed'),FD('dog_food'),TE('dynamo_gourmand'))
+    TDynamos('#chipped:bookshelf','#chipped:bookshelf', TE('dynamo_disenchantment'))
+    TDynamos('#forge:storage_blocks/emerald', '#forge:storage_blocks/diamond', TE('dynamo_lapidary'))
+    TDynamos('#forge:coins/netherite', '#forge:coins/netherite', TE('dynamo_numismatic'))
+    TDynamos('create_sa:large_fueling_tank', 'create_sa:large_filling_tank', TE('dynamo_compression'))
     TMachines('minecraft:smoker', 'minecraft:blast_furnace', 'extendedcrafting:redstone_ingot','immersiveengineering:component_electronic', '#forge:gears/copper', 'thermal:machine_furnace')
     TMachines('create:empty_schematic', 'thermal:redstone_servo', '#forge:workbenches', 'immersiveengineering:component_electronic', '#forge:gears/copper', 'thermal:machine_crafter')
     TMachines('create:mechanical_piston', 'thermal:redstone_servo', 'create:crushing_wheel', 'immersiveengineering:component_electronic', '#forge:gears/copper', 'thermal:machine_pulverizer')
-    TMachines('minecraft:lava_bucket', 'minecraft:lava_bucket', 'thermal:obsidian_glass', 'immersiveengineering:component_electronic', '#forge:gears/invar', 'thermal:machine_crucible')
+    TMachines('tconstruct:blazing_blood_bucket', 'tconstruct:blazing_blood_bucket', '#thermal:glass/hardened', 'immersiveengineering:component_electronic', '#forge:gears/invar', 'thermal:machine_crucible')
     TMachines('minecraft:water_bucket', 'minecraft:lava_bucket', 'create:basin', 'immersiveengineering:component_electronic', '#forge:gears/copper',' thermal:machine_bottler' )
     TMachines('thermal:redstone_servo', 'mekanism:dynamic_tank', "create:mechanical_piston", 'immersiveengineering:component_electronic', '#forge:gears/constantan', 'thermal:machine_press')
     TMachines('thermal:saw_blade', 'thermal:redstone_servo', 'minecraft:stonecutter', 'immersiveengineering:component_electronic','#forge:gears/copper', 'thermal:machine_sawmill')
@@ -697,4 +1538,3 @@ event.shaped(output, [
     TMachines('tconstruct:splash_bottle', 'tconstruct:lingering_bottle', 'minecraft:brewing_stand', 'immersiveengineering:component_electronic_adv', '#forge:gears/constantan', 'thermal:machine_brewer'),
     TMachines('create:blaze_burner', 'create:blaze_burner', 'minecraft:brewing_stand', 'immersiveengineering:component_electronic_adv', '#forge:gears/constantan', 'thermal:machine_pyrolyzer')
     TMachines('create:mechanical_mixer', 'minecraft:compass', 'create:basin', 'immersiveengineering:component_electronic_adv', '#forge:gears/constantan', 'thermal:machine_centrifuge')
-})

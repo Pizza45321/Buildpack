@@ -1,4 +1,9 @@
 onEvent('recipes', event => {
-event.recipes.immersiveengineeringArcFurnace(['12x bigreactors:basic_reactorcasing'], 'thermal:machine_frame', ['4x minecraft:iron_block', '4x mekanism:block_steel','4x tconstruct:cobalt_block'])
-event.recipes.immersiveengineeringArcFurnace(['12x bigreactors:basic_turbinecasing'], 'thermal:machine_frame', ['4x minecraft:copper_block', '4x mekanism:block_steel','4x tconstruct:cobalt_block'])
+event.recipes.immersiveengineeringArcFurnace(['12x bigreactors:basic_reactorcasing'], 'thermal:machine_frame', ['4x #forge:storage_blocks/zinc', '4x #forge:storage_blocks/steel','2x #forge:storage_blocks/cobalt'])
+event.recipes.immersiveengineeringArcFurnace(['12x bigreactors:basic_turbinecasing'], 'thermal:machine_frame', ['4x #forge:storage_blocks/copper', '4x #forge:storage_blocks/steel','2x #forge:storage_blocks/cobalt'])
+event.recipes.immersiveengineeringArcFurnace(['12x mekanismgenerators:turbine_casing'], 'mekanism:steel_casing', [Item.of('tconstruct:large_plate', 2, '{Material:"tconstruct:steel"}'), Item.of('tconstruct:large_plate', 2, '{Material:"tconstruct:osmium"}')])
+event.recipes.immersiveengineeringArcFurnace(['12x mekanism:induction_casing'], 'mekanism:steel_casing', [Item.of('tconstruct:large_plate', 2, '{Material:"tconstruct:electrum"}'), Item.of('tconstruct:large_plate', 2, '{Material:"materialis:refined_glowstone"}')])
+event.recipes.immersiveengineeringArcFurnace(['12x mekanismgenerators:fission_reactor_casing'], 'mekanism:steel_casing', [Item.of('tconstruct:large_plate', 2, '{Material:"tconstruct:lead"}'), Item.of('tconstruct:large_plate', 2, '{Material:"materialis:refined_obsidian"}')])
+event.recipes.immersiveengineeringArcFurnace(['12x mekanism:thermal_evaporation_block'], 'mekanism:steel_casing', [Item.of('tconstruct:large_plate', 2, '{Material:"tconstruct:copper"}'), Item.of('tconstruct:large_plate', 2, '{Material:"tconstruct:osmium"}')])
+event.recipes.immersiveengineeringArcFurnace(['12x mekanismgenerators:fusion_reactor_frame'], 'mekanism:steel_casing', ["4x #forge:pellets/polonium", "4x #forge:alloys/ultimate"])
 })

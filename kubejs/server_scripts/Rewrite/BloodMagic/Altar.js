@@ -1,82 +1,32 @@
 onEvent('recipes', event => {
 	const { altar, array, soulforge, arc, alchemytable } = event.recipes.bloodmagic
 //event.recipes.bloodmagic.alchemytable('bloodmagic:arcaneashes', ['extendedcrafting:luminessence', '#forge:dusts/coke', 'mna:arcane_ash', '#forge:dusts/mana']).syphon(500).ticks(200)
-	event.custom({
+function Altar(inputItem, outputItem, lifeessence, lvl, rate, Drate) {
+  event.remove({output: outputItem})
+  event.custom({
   "type": "bloodmagic:altar",
   "input": {
-    "tag": "forge:storage_blocks/diamond"
+    "item": inputItem
   },
   "output": {
-    "item": "bloodmagic:weakbloodorb"
+    "item": outputItem
   },
-  "upgradeLevel": 0,
-  "altarSyphon": 2000,
-  "consumptionRate": 5,
-  "drainRate": 1
+  "upgradeLevel": lvl,
+  "altarSyphon": lifeessence,
+  "consumptionRate": rate,
+  "drainRate": Drate
+})}
+  Altar('immersiveengineering:component_electronic', 'bloodmagic:mastercore', 2000, 2, 5, 1)
+  Altar('botania:manasteel_sword', 'bloodmagic:daggerofsacrifice', 3000, 1, 5, 5)
+  Altar('botania:elementium_block', ' bloodmagic:magicianbloodorb', 25000, 2, 20, 20)
+  Altar('mna:stone_rune_blank', 'bloodmagic:blankslate', 1000, 0, 5, 5, 1)
+  Altar('malum:block_of_soul_stained_steel', 'bloodmagic:masterbloodorb', 50000, 3, 30, 50)
+  Altar('mysticalagriculture:inferium_block', 'bloodmagic:apprenticebloodorb', 5000, 1, 5, 5)
+  Altar('botania:rune_fire', 'bloodmagic:firescribetool', 5000, 0, 20, 10)
+  Altar('botania:rune_earth', 'bloodmagic:earthscribetool', 5000, 0, 20, 10)
+  Altar('botania:rune_air', 'bloodmagic:airscribetool', 5000, 0, 20, 10)
+  Altar('botania:rune_water', 'bloodmagic:waterscribetool', 5000, 0, 2e0, 10)
+  Altar('botania:rune_mana', 'bloodmagic:duskscribetool', 5000, 0, 20, 10)
+  Altar('minecraft:diamond_block', 'bloodmagic:weakbloodorb', 2000, 0, 5, 1)
 })
-	event.custom({
-  "type": "bloodmagic:altar",
-  "input": {
-    "item": 'mysticalagriculture:inferium_block'
-  },
-  "output": {
-    "item": "bloodmagic:apprenticebloodorb"
-  },
-  "upgradeLevel": 1,
-  "altarSyphon": 5000,
-  "consumptionRate": 5,
-  "drainRate": 5
-})
-	event.custom({
-  "type": "bloodmagic:altar",
-  "input": {
-    "item": 'malum:block_of_soul_stained_steel'
-  },
-  "output": {
-    "item": "bloodmagic:masterbloodorb"
-  },
-  "upgradeLevel": 3,
-  "altarSyphon": 50000,
-  "consumptionRate": 30,
-  "drainRate": 50
-})
-	event.custom({
-  "type": "bloodmagic:altar",
-  "input": {
-    "item": 'botania:elementium_block'
-  },
-  "output": {
-    "item": "bloodmagic:magicianbloodorb"
-  },
-  "upgradeLevel": 2,
-  "altarSyphon": 25000,
-  "consumptionRate": 20,
-  "drainRate": 20
-})
-	event.custom({
-  "type": "bloodmagic:altar",
-  "input": {
-    "item": 'botania:elementium_block'
-  },
-  "output": {
-    "item": "bloodmagic:magicianbloodorb"
-  },
-  "upgradeLevel": 2,
-  "altarSyphon": 25000,
-  "consumptionRate": 5,
-  "drainRate": 1
-})
-	event.custom({
-  "type": "bloodmagic:altar",
-  "input": {
-    "item": 'mna:stone_rune_blank'
-  },
-  "output": {
-    "item": 'bloodmagic:blankslate'
-  },
-  "upgradeLevel": 0,
-  "altarSyphon": 1000,
-  "consumptionRate": 5,
-  "drainRate": 1
-})
-}) 
+ 

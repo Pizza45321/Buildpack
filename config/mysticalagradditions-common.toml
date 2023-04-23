@@ -18,7 +18,7 @@
 #World generation options.
 [World]
 	#Should Nether Prosperity Ore generate in the world?
-	generateNetherProsperityOre = true
+	generateNetherProsperityOre = false
 	#How many Nether Prosperity Ore veins should spawn in a chunk.
 	#Range: > 0
 	netherProsperitySpawnRate = 12
@@ -32,7 +32,7 @@
 	#Range: 0 ~ 128
 	netherProsperitySpawnMaxY = 100
 	#Should Nether Inferium Ore generate in the world?
-	generateNetherInferiumOre = true
+	generateNetherInferiumOre = false
 	#How many Nether Inferium Ore veins should spawn in a chunk.
 	#Range: > 0
 	netherInferiumSpawnRate = 16
@@ -46,7 +46,7 @@
 	#Range: 0 ~ 128
 	netherInferiumSpawnMaxY = 100
 	#Should End Prosperity Ore generate in the world?
-	generateEndProsperityOre = true
+	generateEndProsperityOre = false
 	#How many End Prosperity Ore veins should spawn in a chunk.
 	#Range: > 0
 	endProsperitySpawnRate = 12
@@ -60,7 +60,7 @@
 	#Range: 0 ~ 128
 	endProsperitySpawnMaxY = 100
 	#Should End Inferium Ore generate in the world?
-	generateEndInferiumOre = true
+	generateEndInferiumOre = false
 	#How many End Inferium Ore veins should spawn in a chunk.
 	#Range: > 0
 	endInferiumSpawnRate = 16

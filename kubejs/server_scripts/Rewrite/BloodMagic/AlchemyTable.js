@@ -1,4 +1,5 @@
 onEvent('recipes', event => {
+  const { alchemytable } = event.recipes.bloodmagic
 	event.custom({
   "type": "bloodmagic:alchemytable",
   "input": [
@@ -76,6 +77,30 @@ onEvent('recipes', event => {
   "syphon": 1000,
   "ticks": 200,
   "upgradeLevel": 3
+})
+  event.custom({
+  "type": "bloodmagic:alchemytable",
+  "input": [
+    {
+      "item": "mna:animus_dust"
+    },
+    {
+      "tag": "botania:petals"
+    },
+    {
+      "item": "malum:arcane_charcoal_fragment"
+    },
+    {
+      "item": "extendedcrafting:luminessence"
+    }
+  ],
+  "output": {
+    "item": "bloodmagic:arcaneashes",
+    "count": 1
+  },
+  "syphon": 500,
+  "ticks": 200,
+  "upgradeLevel": 1
 })
 	function SimpleCatalyst(input, output) {
 		event.custom({
@@ -164,82 +189,11 @@ onEvent('recipes', event => {
   "upgradeLevel": 4
 })
 	}
-function NetherGemCatalyst(input, output) {
-    event.custom({
-  "type": "bloodmagic:soulforge",
-  "input0": {
-    "item": "bloodmagic:weakbloodshard"
-  },
-  "input1": {
-    "tag": input
-  },
-  "input2": {
-    "item": "extendedcrafting:luminessence"
-  },
-  "input3": {
-    "tag": "mna:gems/chimerite"
-  },
-  "output": {
-    "item": output,
-    'count': 6
-  },
-  "minimumDrain": 200.0,
-  "drain": 25.0
-})
-  }
-  function SimpleGemCatalyst(input, output) {
-    event.custom({
-  "type": "bloodmagic:soulforge",
-  "input0": {
-    "item": "bloodmagic:simplecatalyst"
-  },
-  "input1": {
-    "tag": input
-  },
-  "input2": {
-    "item": "extendedcrafting:luminessence"
-  },
-  "input3": {
-    "tag": "mna:gems/chimerite"
-  },
-  "output": {
-    "item": output,
-    'count': 4
-  },
-  "minimumDrain": 100.0,
-  "drain": 25.0
-})
-  }
-  function StrGemCatalyst(input, output) {
-    event.custom({
-  "type": "bloodmagic:soulforge",
-  "input0": {
-    "item": "bloodmagic:strengthenedcatalyst"
-  },
-  "input1": {
-    "tag": input
-  },
-  "input2": {
-    "item": "extendedcrafting:luminessence"
-  },
-  "input3": {
-    "tag": "mna:gems/chimerite"
-  },
-  "input4": {
-    'tag': 'bloodmagic:dusts/corrupted'
-  },
-  "output": {
-    "item": output,
-    'count': 6
-  },
-  "minimumDrain": 400.0,
-  "drain": 100.0
-})
-  }
 	SimpleCatalyst('forge:raw_materials/iron','thermal:iron_dust')
 	SimpleCatalyst('forge:raw_materials/copper','thermal:copper_dust')
 	SimpleCatalyst('forge:raw_materials/zinc','create:crushed_zinc_ore')
 	SimpleCatalyst('forge:raw_materials/tin','thermal:tin_dust')
+  SimpleCatalyst('forge:raw_materials/aluminum','immersiveengineering:dust_aluminum')
 	SimpleCatalyst('forge:raw_materials/soulstone','malum:crushed_soulstone')
   StrengthenedCatalyst('forge:raw_materials/silver', 'thermal:silver_dust')
 	StrengthenedCatalyst('forge:raw_materials/gold', 'thermal:gold_dust')
@@ -248,16 +202,16 @@ function NetherGemCatalyst(input, output) {
 	StrengthenedCatalyst('forge:raw_materials/osmium', 'mekanism:dust_osmium')
 	StrengthenedCatalyst('forge:raw_materials/uranium', 'mekanism:dust_uranium')
 	BloodShardCatalyst('forge:raw_materials/cobalt', 'tconstruct:cobalt_ingot')
-  NetherGemCatalyst('forge:ores/quartz', 'minecraft:quartz')
-  NetherGemCatalyst('forge:ores/b_quartz', 'malum:blazing_quartz')
-  SimpleGemCatalyst('forge:ores/coal', 'minecraft:coal')
-  SimpleGemCatalyst('forge:ores/niter', 'thermal:niter')
-  SimpleGemCatalyst('forge:ores/cinnabar', 'thermal:cinnabar')
-  SimpleGemCatalyst('forge:ores/vinteum', 'mna:vinteum_dust')
-  SimpleGemCatalyst('forge:ores/sulfur', 'thermal:sulfur')
-  SimpleGemCatalyst('forge:ores/lapis', 'minecraft:lapis_lazuli')
-  SimpleGemCatalyst('forge:ores/flourite', 'mekanism:fluorite_gem')
-  SimpleGemCatalyst('forge:ores/redstone', 'minecraft:redstone')
-  StrGemCatalyst('forge:ores/diamond', 'minecraft:diamond')
-  StrGemCatalyst('forge:ores/emerald', 'minecraft:emerald')
+  alchemytable('bloodmagic:reagentsight', ['create:goggles', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(500).ticks(200).upgradeLevel(0)
+  alchemytable('bloodmagic:reagentwater', ['mysticalagriculture:water_agglomeratio', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(300).ticks(200).upgradeLevel(0)
+  alchemytable('bloodmagic:reagentlava', ['mysticalagriculture:fire_agglomeratio', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(1000).ticks(200).upgradeLevel(0)
+  alchemytable('bloodmagic:reagentair', ['mysticalagriculture:air_agglomeratio', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(2000).ticks(200).upgradeLevel(1)
+  alchemytable('bloodmagic:reagentholding', ['create:item_vault', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(2000).ticks(200).upgradeLevel(1)
+  alchemytable('bloodmagic:reagentfastminer', ['create_sa:brass_drill_head', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(2000).ticks(200).upgradeLevel(1)
+  alchemytable('bloodmagic:reagentgrowth', ['botania:overgrowth_seed', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(2000).ticks(200).upgradeLevel(1)
+  alchemytable('bloodmagic:reagentvoid', ['minecraft:tnt', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(1000).ticks(200).upgradeLevel(1)
+  alchemytable('bloodmagic:reagentbloodlight', ['malum:ether_torch', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(1000).ticks(200).upgradeLevel(2)
+  alchemytable('bloodmagic:reagentmagnetism', ['botania:lens_magnet', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(1000).ticks(200).upgradeLevel(2)
+  alchemytable('bloodmagic:reagentteleposition', ['bloodmagic:teleposerfocus', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(1000).ticks(200).upgradeLevel(3)
+  alchemytable('bloodmagic:reagentsuppression', ['mna:mote_ender', 'mna:animus_dust', 'botania:mana_powder', 'malum:wicked_spirit']).syphon(1000).ticks(200).upgradeLevel(3)
 })
